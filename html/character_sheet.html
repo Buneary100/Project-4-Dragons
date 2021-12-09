@@ -58,11 +58,11 @@
           <div>
             <input type="checkbox" id="strSavingThrow">
             <input type="text" id="strSavingThrow" READONLY/>
-            <label for="strSavingThrow">Saving Throws</label><br>
+            <label for="strSavingThrow_label">Saving Throws</label><br>
 
             <input type="checkbox" id="athletics">
             <input type="text" id="athletics" READONLY/>
-            <label for="athletics">Athletics</label>
+            <label for="athletics_label">Athletics</label>
           </div>
         </div>
 
@@ -74,19 +74,19 @@
           <div>
             <input type="checkbox" id="dexSavingThrow">
             <input type="text" id="dexSavingThrow" READONLY/>
-            <label for="dexSavingThrow">Saving Throws</label><br>
+            <label for="dexSavingThrow_label">Saving Throws</label><br>
 
             <input type="checkbox" id="arcobatics">
             <input type="text" id="arcobatics" READONLY/>
-            <label for="arcobatics">Arcobatics</label><br>
+            <label for="arcobatics_label">Arcobatics</label><br>
 
             <input type="checkbox" id="sleightOfHand">
             <input type="text" id="sleightOfHand" READONLY/>
-            <label for="sleightOfHand">Sleight of hand</label><br>
+            <label for="sleightOfHand_label">Sleight of hand</label><br>
 
             <input type="checkbox" id="stealth">
             <input type="text" id="stealth" READONLY/>
-            <label for="stealth">Stealth</label><br>
+            <label for="stealth_label">Stealth</label><br>
           </div>
         </div>
   
@@ -119,11 +119,37 @@
     <div>
     </div>
 
-    <!-- <input type="text" READONLY/>  -->
-    ...
   </body>
 
   <footer>
-
+    <div>
+      <label id = "otherProficienciesAndLanguages_label">Other Proficiencies & Languages</label>
+      <input type="text" placeholder="Type something..." id="otherProficienciesAndLanguages">
+    </div>
+    
+    <div>
+      <label id = "equipmentAndCharacterNotes_label">Equipment And Character Notes</label>
+      <input type="text" placeholder="Type something..." id="equipmentAndCharacterNotes">
+      <ul>
+        <li>
+          <label for="copperPieces_label">Copper Pieces</label>
+          <input type="text" id="copperPieces" READONLY/><br>
+        </li>
+        <li>
+          <label for="sleightOfHand_label">Silver Pieces</label>
+          <input type="text" id="silverPieces" READONLY/><br>
+        </li>
+        <li>
+          <label for="goldPieces_label">Gold Pieces</label>
+          <input type="text" id="goldPieces" READONLY/><br>
+        </li>
+        <li>
+          <label for="platinumPieces_label">Platium Pieces</label>
+          <input type="text" id="platinumPieces" READONLY/>
+        </li>
+      </ul>
+      <div>
+      </div>
+    </div>
   </footer>
 </html>
