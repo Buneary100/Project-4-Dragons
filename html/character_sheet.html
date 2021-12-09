@@ -50,14 +50,46 @@
         <input type="text" id="inspiration">
       </li>
       <div>
-        <li>
-          <label id = "str_label">Strength</label>
-          <input type="text" id="str">
-        </li>
-        <li>
-          <label id = "dex_label">Strength</label>
-          <input type="text" id="dex">
-        </li>
+        <div>
+          <li>
+            <label id = "str_label">Strength</label>
+            <input type="text" id="str">
+          </li>
+          <div>
+            <input type="checkbox" id="strSavingThrow">
+            <input type="text" id="strSavingThrow" READONLY/>
+            <label for="strSavingThrow">Saving Throws</label><br>
+
+            <input type="checkbox" id="athletics">
+            <input type="text" id="athletics" READONLY/>
+            <label for="athletics">Athletics</label>
+          </div>
+        </div>
+
+        <div>
+          <li>
+            <label id = "dex_label">Dexterity</label>
+            <input type="text" id="dex">
+          </li>
+          <div>
+            <input type="checkbox" id="dexSavingThrow">
+            <input type="text" id="dexSavingThrow" READONLY/>
+            <label for="dexSavingThrow">Saving Throws</label><br>
+
+            <input type="checkbox" id="arcobatics">
+            <input type="text" id="arcobatics" READONLY/>
+            <label for="arcobatics">Arcobatics</label><br>
+
+            <input type="checkbox" id="sleightOfHand">
+            <input type="text" id="sleightOfHand" READONLY/>
+            <label for="sleightOfHand">Sleight of hand</label><br>
+
+            <input type="checkbox" id="stealth">
+            <input type="text" id="stealth" READONLY/>
+            <label for="stealth">Stealth</label><br>
+          </div>
+        </div>
+  
         <li>
           <label id = "con_label">Constitution</label>
           <input type="text" id="con">
