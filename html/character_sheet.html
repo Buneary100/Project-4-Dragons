@@ -1,97 +1,81 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Character Sheet</title>
-    <link href="../css/styles.css" rel="stylesheet" type="text/css">
-    <link href="../css/character_sheet.css" rel="stylesheet" type="text/css">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Character Sheet</title>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css">
+  <link href="../css/character_sheet.css" rel="stylesheet" type="text/css">
+</head>
+<div class="grid-container">
   <header>
-    <div>
-    <label id = "characterName_label">Character Name</label>
-    <input type="text" id="characterName">
-    </div>
-    <div>
-      <ul>
-        <li>
-          <label id = "classAndLevel_label">Class & Level</label>
-          <input type="text" id="classAndLevel">
-        </li>
-        <li>
-          <label id = "background_label">Backgroud</label>
-          <input type="text" id="background">
-        </li>
-        <li>
-          <label id = "playerName_label">Player Name</label>
-          <input type="text" id="playerName">
-        </li>
-        <li>
-          <label id = "race_label">Race</label>
-          <input type="text" id="race">
-        </li>
-        <li>
-          <label id = "alignment_label">Alignment</label>
-          <input type="text" id="alignment">
-        </li>
-        <li>
-          <label id = "experiencePoints_label">Experience Points</label>
-          <input type="text" id="experiencePoints">
-        </li>
-      </ul>
-    </div>
   </header>
+
   <body>
-    <div>
-      <li>
-        <label id = "proficiencyBonus_label">Proficiency Bonus</label>
-        <input type="text" id="proficiencyBonus">
-      </li>
-      <li>
-        <label id = "inspiration_label">Inspiration</label>
-        <input type="text" id="inspiration">
-      </li>
-      <div>
-        <li>
-          <label id = "str_label">Strength</label>
-          <input type="text" id="str">
-        </li>
-        <li>
-          <label id = "dex_label">Strength</label>
-          <input type="text" id="dex">
-        </li>
-        <li>
-          <label id = "con_label">Constitution</label>
-          <input type="text" id="con">
-        </li>
-        <li>
-          <label id = "int_label">Intelligence</label>
-          <input type="text" id="int">
-        </li>
-        <li>
-          <label id = "wis_label">Wisdom</label>
-          <input type="text" id="wis">
-        </li>
-        <li>
-          <label id = "char_label">Charisma</label>
-          <input type="text" id="char">
-        </li>
-      </div>
-      <li>
-        <label id = "passivePer_label">Passive Wisdom (Perception)</label>
-        <input type="text" id="passivePer">
-      </li>
+    <div class="descBox">
+    <div class="charName">
+      <input type="text" id="characterName"> <br>
+      <label id="characterName_label">Character Name</label>
     </div>
-
-    <div>
+    <div class="charDesc1">
+      <input type="text" id="classAndLevel"> <br>
+      <label id="classAndLevel_label">Class & Level</label> <br>
+      <input type="text" id="race"> <br>
+      <label id="race_label">Race</label>
     </div>
-
-    <div>
+    <div class="charDesc2">
+      <input type="text" id="background"> <br>
+      <label id="background_label">Background</label> <br>
+      <input type="text" id="alignment"> <br>
+      <label id="alignment_label">Alignment</label>
     </div>
+    <div class="charDesc3">
+      <input type="text" id="playerName"> <br>
+      <label id="playerName_label">Player Name</label> <br>
+      <input type="text" id="experiencePoints"> <br>
+      <label id="experiencePoints_label">Experience Points</label>
+    </div>
+  </div>
+    <div class="bonus">
+      <label id="proficiencyBonus_label">Proficiency Bonus</label>
+      <input type="text" id="proficiencyBonus" maxlength="2" size="2"> <br>
+      <label id="inspiration_label">Inspiration</label>
+      <input type="text" id="inspiration" maxlength="2" size="2">
+    </div>
+    <div class="abilScore">
+      <label id="str_label">Strength</label> <br>
+      <input type="text" id="str" maxlength="2" size="2"> <br>
+      <label id="dex_label">Dexterity</label> <br>
+      <input type="text" id="dex" maxlength="2" size="2"> <br>
+      <label id="con_label">Constitution</label> <br>
+      <input type="text" id="con" maxlength="2" size="2"> <br>
+      <label id="int_label">Intelligence</label> <br>
+      <input type="text" id="int" maxlength="2" size="2"> <br>
+      <label id="wis_label">Wisdom</label> <br>
+      <input type="text" id="wis" maxlength="2" size="2"> <br>
+      <label id="char_label">Charisma</label> <br>
+      <input type="text" id="char" maxlength="2" size="2"> <br>
+    </div>
+    <div class="passPer">
+      <label id="passivePer_label">Passive Wisdom (Perception)</label>
+      <input type="text" id="passivePer" maxlength="2" size="2">
+    </div>
+</div>
 
-    <!-- <input type="text" READONLY/>  -->
-    ...
-  </body>
+<div>
+</div>
 
-  <footer>
+<div>
+</div>
 
-  </footer>
+<!-- <input type="text" READONLY/>  -->
+...
+</body>
+
+<footer>
+
+</footer>
+</div>
+<!--end of grid-->
+
 </html>
