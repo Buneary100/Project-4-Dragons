@@ -1,66 +1,79 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>Character Sheet</title>
-    <link href="../css/styles.css" rel="stylesheet" type="text/css">
-    <link href="../css/character_sheet.css" rel="stylesheet" type="text/css">
-  </head>
 
+            
+ <head>
+  <meta charset="UTF-8">
+  <title>Character Sheet</title>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css">
+  <link href="../css/character_sheet.css" rel="stylesheet" type="text/css">
+</head>
+<div class="grid-container">
   <header>
-    <div>
-    <label id = "characterName_label">Character Name</label>
-    <input type="text" id="characterName">
-
-    <button type="button" id="saveButton" name = "saveButton" onClick="">Click Me To Save!!!!</button>
-
-    </div>
-    <div>
-      <ul>
-        <li>
-          <label id = "classAndLevel_label">Class & Level</label>
-          <input type="text" id="classAndLevel">
-        </li>
-        <li>
-          <label id = "background_label">Backgroud</label>
-          <input type="text" id="background">
-        </li>
-        <li>
-          <label id = "playerName_label">Player Name</label>
-          <input type="text" id="playerName">
-        </li>
-        <li>
-          <label id = "race_label">Race</label>
-          <input type="text" id="race">
-        </li>
-        <li>
-          <label id = "alignment_label">Alignment</label>
-          <input type="text" id="alignment">
-        </li>
-        <li>
-          <label id = "experiencePoints_label">Experience Points</label>
-          <input type="text" id="experiencePoints">
-        </li>
-      </ul>
-    </div>
+        <button type="button" id="saveButton" name = "saveButton" onClick="">Click Me To Save!!!!</button>
   </header>
 
   <body>
-    <div>
-      <!-- This will be the left collumn       -->
+    <div class="descBox">
+    <div class="charName">
+      <input type="text" id="characterName"> <br>
+      <label id="characterName_label">Character Name</label>
+    </div>
+    <div class="charDesc1">
+      <input type="text" id="classAndLevel"> <br>
+      <label id="classAndLevel_label">Class & Level</label> <br>
+      <input type="text" id="race"> <br>
+      <label id="race_label">Race</label>
+    </div>
+    <div class="charDesc2">
+      <input type="text" id="background"> <br>
+      <label id="background_label">Background</label> <br>
+      <input type="text" id="alignment"> <br>
+      <label id="alignment_label">Alignment</label>
+    </div>
+    <div class="charDesc3">
+      <input type="text" id="playerName"> <br>
+      <label id="playerName_label">Player Name</label> <br>
+      <input type="text" id="experiencePoints"> <br>
+      <label id="experiencePoints_label">Experience Points</label>
+      
+    </div>
+  </div>
+  <!-- This will be the left collumn       -->
+    <div class="bonus">
+      <label id="proficiencyBonus_label">Proficiency Bonus</label>
+      <input type="text" id="proficiencyBonus" maxlength="2" size="2"> <br>
+      <label id="inspiration_label">Inspiration</label>
+      <input type="text" id="inspiration" maxlength="2" size="2">
+    </div>
+    <div class="abilScore">
+      <label id="str_label">Strength</label> <br>
+      <input type="text" id="str" maxlength="2" size="2"> <br>
+      <input type="text" id="strModifier" READONLY> <br>
+      
+      <label id="dex_label">Dexterity</label> <br>
+      <input type="text" id="dex" maxlength="2" size="2"> <br>
+                  <input type="text" id="dexModifier" READONLY> <br>
 
-      <li>
-        <label id = "proficiencyBonus_label">Proficiency Bonus</label>
-        <input type="text" id="proficiencyBonus">
-      </li>
-      <div>
-        <div>
-          <li>
-            <label id = "str_label">Strength</label>
-            <input type="text" id="str">
-            <input type="text" id="strModifier" READONLY>
-          </li>
-          <div>
+      <label id="con_label">Constitution</label> <br>
+      <input type="text" id="con" maxlength="2" size="2"> <br>
+      <input type="text" id="conModifier" READONLY> <br>
+      
+      <label id="int_label">Intelligence</label> <br>
+      <input type="text" id="int" maxlength="2" size="2"> <br>
+      <input type="text" id="intModifier" READONLY> <br>
+      
+      <label id="wis_label">Wisdom</label> <br>
+      <input type="text" id="wis" maxlength="2" size="2"> <br>
+      <input type="text" id="wisModifier" READONLY> <br>
+      
+      <label id="char_label">Charisma</label> <br>
+      <input type="text" id="char" maxlength="2" size="2"> <br>
+      <input type="text" id="charModifier" READONLY> <br>
+
+    </div>          
+  <div>
             <input type="checkbox" id="strSavingThrow">
             <input type="text" id="strSavingThrow" READONLY/>
             <label for="strSavingThrow_label">Saving Throws</label><br>
@@ -69,15 +82,7 @@
             <input type="text" id="athletics" READONLY/>
             <label for="athletics_label">Athletics</label>
           </div>
-        </div>
-
-        <div>
-          <li>
-            <label id = "dex_label">Dexterity</label>
-            <input type="text" id="dex">
-            <input type="text" id="dexModifier" READONLY>
-          </li>
-          <div>
+                      <div>
             <input type="checkbox" id="dexSavingThrow">
             <input type="text" id="dexSavingThrow" READONLY/>
             <label for="dexSavingThrow_label">Saving Throws</label><br>
@@ -94,28 +99,12 @@
             <input type="text" id="stealth" READONLY/>
             <label for="stealth_label">Stealth</label><br>
           </div>
-        </div>
-
-        <div>
-          <li>
-            <label id = "con_label">Constitution</label>
-            <input type="text" id="con">
-            <input type="text" id="conModifier" READONLY>
-          </li>
-          <div>
+  <div>
             <input type="checkbox" id="conSavingThrow">
             <input type="text" id="conSavingThrow" READONLY/>
             <label for="conSavingThrow_label">Saving Throws</label><br>
           </div>
-        </div>
-  
-        <div>
-          <li>
-            <label id = "int_label">Intelligence</label>
-            <input type="text" id="int">
-            <input type="text" id="intModifier" READONLY>
-          </li>
-          <div>
+            <div>
             <input type="checkbox" id="intSavingThrow">
             <input type="text" id="intSavingThrow" READONLY/>
             <label for="dexSavingThrow_label">Saving Throws</label><br>
@@ -140,16 +129,7 @@
             <input type="text" id="religion" READONLY/>
             <label for="religion_label">Religion</label><br>
           </div>
-        </div>
-       
-        <div>
-          <li>
-            <label id = "wis_label">Wisdom</label>
-            <input type="text" id="wis">
-            <input type="text" id="wisModifier" READONLY>
-          </li>
-
-          <div>
+            <div>
             <input type="checkbox" id="wisSavingThrow">
             <input type="text" id="wisSavingThrow" READONLY/>
             <label for="wisSavingThrow_label">Saving Throws</label><br>
@@ -174,16 +154,7 @@
             <input type="text" id="survival" READONLY/>
             <label for="survival_label">Survival</label><br>
           </div>
-        </div>
-        
-        <div>
-          <li>
-            <label id = "char_label">Charisma</label>
-            <input type="text" id="char">
-            <input type="text" id="charModifier" READONLY>
-          </li>
-
-          <div>
+  <div>
             <input type="checkbox" id="charSavingThrow">
             <input type="text" id="charSavingThrow" READONLY/>
             <label for="charSavingThrow_label">Saving Throws</label><br>
@@ -204,33 +175,28 @@
             <input type="text" id="persuasion" READONLY/>
             <label for="persuasion_label">Persuasion</label><br>
           </div>
-
-        </div>
-      </div>
-      
-      <div>
-        <li>
-          <label id = "passivePer_label">Passive Wisdom (Perception)</label>
-          <input type="text" id="passivePer" READONLY>
-        </li>
-      </div>
+  </div>
+    <div class="passPer">
+      <label id="passivePer_label">Passive Wisdom (Perception)</label>
+      <input type="text" id="passivePer" maxlength="2" size="2" READONLY>
     </div>
+</div>
 
-    <div>
-      <!-- This will be the middle collumn       -->
-    </div>
+<div>
+        <!-- This will be the middle collumn       -->
+</div>
 
-    <div>
-      <!-- This will be the right collumn       -->
-
-      <div>
+<div>
+   <!-- This will be the right collumn       -->
+</div>
+  <div>
         <label id = "featuresAndTraits_label">Features & Traits</label>
         <input type="text" placeholder="Type something..." id="featuresAndTraits">
       </div>
 
-    </div>
-
-  </body>
+<!-- <input type="text" READONLY/>  -->
+...
+</body>
 
   <footer>
     <div>
@@ -263,5 +229,4 @@
       </div>  
     </div>
 
-  </footer>
 </html>
