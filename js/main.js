@@ -1,22 +1,27 @@
-function login()
+function loginFunction()
 {
     const username = document.querySelector('#username').value;
-    const note = document.querySelector('#password').value;
+    const password = document.querySelector('#password').value;
 
-    const url = "http://localhost:3000";
-    const params = `?username=${username}&password=${password}`;
+    const url = "http://localhost:3000/register";
 
-    const fetchObject = {
-        method: 'GET',
-        headers: {
-            'Content-Type' : 'text/html'
-        }
+    const dataObject = {
+        username: username,
+        password: password
     };
 
-    fetch(url + params, fetchObject)
+    const fetchObject = {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(dataObject)
+    };
+
+    fetch(url, fetchObject)
         .then(response => response.json())               // obtain json object sent from server
         .then(jsonObject => {                            // use jsonObject and get its message property
-            console.log(jsonObject.message);   // set innerHTML of span to message sent in jsonObject
+            //outputSpan.innerHTML = jsonObject.message;   // set innerHTML of span to message sent in jsonObject
+            console.log(jsonObject.message)
         });
-    location.reload();
 }
