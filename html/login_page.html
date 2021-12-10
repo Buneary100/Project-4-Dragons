@@ -6,13 +6,16 @@
     <link href="../css/login_page.css" rel="stylesheet" type="text/css">
     <script src="../js/main.js"></script>
   </head>
+  <header>
+    <h1>Dungeons and Dragons Character Database</h1>
+  </header>
   <body>
-    <form>
+    <form class="log">
       <label for="username">Username:</label><br>
       <input type="text" id="username" name="username"><br>
       <label for="password">Password:</label><br>
       <input type="text" id="password" name="password">
-      <button type="button" id="login" name = "login" onClick="loginFunction()">Click Me!</button>
+      <button type="button" id="loginButton" name = "loginButton" onClick="login(); fillBaseMod();">Click Me!</button>
     </form>
   </body>
 </html>
