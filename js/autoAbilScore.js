@@ -1,3 +1,12 @@
+function fillAbilityScore() {
+    document.getElementById("str").value = rollAbilityScore();
+    document.getElementById("dex").value = rollAbilityScore();
+    document.getElementById("con").value = rollAbilityScore();
+    document.getElementById("int").value = rollAbilityScore();
+    document.getElementById("wis").value = rollAbilityScore();
+    document.getElementById("char").value = rollAbilityScore();
+}
+
 function rollAbilityScore() {
 const dice = [rollD6(), rollD6(), rollD6(), rollD6()];
 

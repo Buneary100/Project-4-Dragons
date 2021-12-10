@@ -8,6 +8,7 @@
   <title>Character Sheet</title>
   <link href="../css/styles.css" rel="stylesheet" type="text/css">
   <link href="../css/character_sheet.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="../js/autoAbilScore.js"></script>
 </head>
 <div class="grid-container">
   <header>
@@ -87,7 +88,7 @@
       <div class="skills"> -->
         <input type="checkbox" id="dexSavingThrow">
         <input type="text" id="dexSavingThrow" maxlength="3" size="3" READONLY />
-        <label for="dexSavingThrow_label">Saving Throws</label><br>
+        <label for="dexSavingThrow_label">Dex Saving Throws</label><br>
 
         <input type="checkbox" id="acrobatics">
         <input type="text" id="acrobatics" maxlength="3" size="3" READONLY />
@@ -104,12 +105,12 @@
       <div class="skills"> -->
         <input type="checkbox" id="conSavingThrow">
         <input type="text" id="conSavingThrow" maxlength="3" size="3" READONLY />
-        <label for="conSavingThrow_label">Saving Throws</label><br>
+        <label for="conSavingThrow_label">Con Saving Throws</label><br>
         <!-- </div>
       <div class="skills"> -->
         <input type="checkbox" id="intSavingThrow">
         <input type="text" id="intSavingThrow" maxlength="3" size="3" READONLY />
-        <label for="dexSavingThrow_label">Saving Throws</label><br>
+        <label for="dexSavingThrow_label">Int Saving Throws</label><br>
 
         <input type="checkbox" id="arcana">
         <input type="text" id="arcana" maxlength="3" size="3" READONLY />
@@ -134,7 +135,7 @@
       <div class="skills"> -->
         <input type="checkbox" id="wisSavingThrow">
         <input type="text" id="wisSavingThrow" maxlength="3" size="3" READONLY />
-        <label for="wisSavingThrow_label">Saving Throws</label><br>
+        <label for="wisSavingThrow_label">Wis Saving Throws</label><br>
 
         <input type="checkbox" id="animalHandling">
         <input type="text" id="animalHandling" maxlength="3" size="3" READONLY />
@@ -159,7 +160,7 @@
       <div class="skills"> -->
         <input type="checkbox" id="charSavingThrow">
         <input type="text" id="charSavingThrow" maxlength="3" size="3" READONLY />
-        <label for="charSavingThrow_label">Saving Throws</label><br>
+        <label for="charSavingThrow_label">Char Saving Throws</label><br>
 
         <input type="checkbox" id="deception">
         <input type="text" id="deception" maxlength="3" size="3" READONLY />
@@ -189,12 +190,13 @@
     </div>
     <div class="points">
       <!-- This will be the middle collumn       -->
-      <div>
-        <textarea name="note" id="equipmentAndCharacterNotes" cols="35vw" rows="15"
-          placeholder="Type something..."></textarea><br>
+      <div class="stuff">
+        <div class="equipment">
+          <textarea name="note" id="equipmentAndCharacterNotes" cols="35vw" rows="15"
+            placeholder="Type something..."></textarea><br>
           <label id="equipmentAndCharacterNotes_label">Equipment And Character Notes</label><br>
-
-        <div>
+        </div>
+        <div class="money">
           <label for="copperPieces_label">Copper Pieces</label>
           <input type="text" id="copperPieces" maxlength="5" size="5" /><br>
           <label for="sleightOfHand_label">Silver Pieces</label>
@@ -209,9 +211,9 @@
 
     <div class="traits">
       <!-- This will be the right collumn       -->
-      <div>
+      <div class="feat">
         <textarea name="note" id="featuresAndTraits" cols="35vw" rows="15"
-        placeholder="Type something..."></textarea><br>
+          placeholder="Type something..."></textarea><br>
         <label id="featuresAndTraits_label">Features & Traits</label>
       </div>
     </div>
@@ -221,8 +223,9 @@
   </body>
 
   <footer>
-    <div>
-
+    <div class="autoGenerate">
+      <button type="button" id="autoRoll" name="autoRoll" onClick="fillAbilityScore()" style="width: 150px;">Auto Roll Ability
+        Scores</button>
     </div>
 
 </html>
