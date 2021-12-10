@@ -1,9 +1,12 @@
-const db = require('./database');
+const mysql = require('mysql2');
 const express = require('express');
+const bodyParser = require('body-parser');
+var path = require('path');
 const app = express();  //get an express object
 const cors = require('cors');  //avoid that nasty CORS error
-const bodyParser = require('body-parser');
 const{check, validationResults} = require('express-validator');
+const req = require('express/lib/request');
+const res = require('express/lib/response');
 
 const portNum = 3000;
 
@@ -13,11 +16,59 @@ app.use(cors({origin: '*'}));
 //allow body parsing
 app.use(express.json());
 
-app.get('/', async (req, res) =>{
-    const results = await db.promise().query(`SELECT * FROM LOGIN`)
-    res.status(200).send(results[0]);
-})
+var con = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'HardApple$12',
+    database: 'mydb',
+});
 
+con.connect(function(err) {
+    if (err) throw err;
+    console.log("Connected!");
+  });
+
+
+app.post('/register', (req, res) => {
+
+    const username = req.body.username;
+    const password = req.body.password;
+
+    con.query("INSERT INTO login (Username, Password) VALUES (?,?)", [username, password], function(err, result){
+        if(err)
+        {
+            console.log(err.message);
+        }
+        else
+        {
+            console.log(result.message);
+        }
+    });
+});
+
+
+app.post('/login', (req, res) =>{
+
+    const username = req.body.username;
+    const password = req.body.password;
+
+    con.query("SELECT * FROM login WHERE Username = ? AND Password = ?", [username, password], (err, result) => {
+        if(err)
+        {
+            res.send({err: err});
+        }
+        if(result)
+        {
+            res.send(result)
+        }
+        else{
+            res.send({message: "wrong username or password"});
+        }
+
+    })
+
+})
+/*
 app.post('/', 
 check('USERNAME').notEmpty().withMessage('Username cannot be empty'), 
 check('PASSWORD').notEmpty().withMessage('Password cannot be empty'), 
@@ -43,4 +94,8 @@ check('PASSWORD').notEmpty().withMessage('Password cannot be empty'),
 
     }
     
+});
+*/
+app.listen(portNum, () => {
+    console.log(`listening on port ${portNum}`);
 });

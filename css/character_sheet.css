@@ -1,83 +1,166 @@
 body {
-    font-family: sans-serif;
-    background-image: url("../Images/background.png");
-    width: 80vw;
-    margin: auto;
-    padding: 1vw;
-  }
-    
-  .descBox {
-    grid-area: char; 
-    display: grid;
-      border-style: double;
-      grid-template-areas:
-      'charName charDesc1 charDesc2 charDesc3';
-  }
-  .charName { 
-    grid-area: charName; 
-    font-size: 20px;
+  font-family: sans-serif;
+  background-image: url("../Images/background.png");
+  width: 80vw;
+  margin: auto;
+  padding: 1vw;
 }
-  .charDesc1 { 
-      grid-area: charDesc1; 
-      font-size: 10px;
-    }
-    .charDesc2 { 
-        grid-area: charDesc2; 
-        font-size: 10px;
-      }
-    .charDesc3 { 
-      grid-area: charDesc3; 
-      font-size: 10px;
-    }
-  .abilScore { 
-      grid-area: abilScore; 
-      border-style: solid;
-      border-width: 1px; 
-    }
-  .bonus { 
-    grid-area: bonus;
-    border-style: solid;
-    border-width: 1px; 
+
+/*Top box*/
+.descBox {
+  grid-area: char; 
+  display: grid;
+  border-style: double;
+  grid-template-areas:
+  'charName charDesc1 charDesc2 charDesc3';
 }
-  .saveThrow { 
-      grid-area: saveThrow;
-      border-style: solid;
-      border-width: 1px; 
-    }
-  .skills { 
-      grid-area: skills;
-      border-style: solid;
-      border-width: 1px; 
-    }
-  .passPer { 
-      grid-area: passPer;
-      border-style: solid;
-      border-width: 1px; 
-    }
-  .notes { grid-area: notes;}
+.charName { 
+  grid-area: charName; 
+  font-size: 20px;
+}
+.charDesc1 { 
+  grid-area: charDesc1; 
+  font-size: 10px;
+}
+.charDesc2 { 
+  grid-area: charDesc2; 
+  font-size: 10px;
+}
+.charDesc3 { 
+  grid-area: charDesc3; 
+  font-size: 10px;
+}
 
-  
-  .grid-container {
-      display: grid;
-      align-content: center;
-      grid-template-areas:
-      'char char char char'
-      'abilScore bonus notes notes'
-      'abilScore saveThrow notes notes'
-      'abilScore skills notes notes'
-      'passPer skills notes notes';
-    grid-gap: 10px;
-    padding: 1vw;
-    background-color: white;
-    border-style: inset;
-    border-color: red;
-    box-shadow: 10px 10px darkred;
-    font-size: 1vw;
+/*First column*/
+.firstCol { 
+  grid-area: firstCol;
+  display: grid;
+  grid-template-areas:
+  'abilScore inspiration inspiration'
+  'abilScore skills skills'
+  'abilScore skills skills'
+  'passPer passPer passPer'
+  'prof prof prof';
+}
+.abilScore { 
+  grid-area: abilScore; 
+  border-style: solid;
+  border-width: 1px; 
+  line-height: 4vh;
+  padding: 5px;
+  margin: 1%;
+}
+.inspiration { 
+  grid-area: inspiration;
+  border-style: solid;
+  border-width: 1px; 
+  margin: 1%;
+  padding: 5px;
+}
+.passPer { 
+  grid-area: passPer;
+  border-style: solid;
+  border-width: 1px; 
+  padding: 5px;
+  margin: 1%;
+}
+.prof {
+  grid-area: prof;
+  border-style: solid;
+  border-width: 1px; 
+  margin: 1%;
+  padding: 5px;
+}
+.skills {
+  grid-area: skills;
+  display: inline;
+  text-align: left;
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px; 
+  margin: 1%;
+}
+/*Second column*/
+.points {
+  grid-area: points;
+  display: grid;
+  grid-template-areas:
+  'armor initative speed'
+  'hit hit hit'
+  'death death death'
+  'attack attack attack'
+  'stuff stuff stuff'
+}
 
-  }
+.equipment {
+  grid-area: equipment;
+  padding: 5px;
+  margin: 1%;
+}
+
+.money {
+  display: inline;
+  text-align: right;
+  grid-area: money;
+  padding: 5px;
+  margin: 1%;
+  font-size: 10px;
+  line-height: 30px;
+}
+
+.stuff {
+  grid-area: stuff;
+  display: grid;
+  border-style: solid;
+  border-width: 1px; 
+  grid-template-areas: 
+  'money equipment equipment';
+}
+
+/*Third column*/
+.traits { 
+  grid-area: traits;
+  display: grid;
+  grid-template-areas: 
+  'personality'
+  'ideals'
+  'bonds'
+  'flaws'
+  'feat'
+  'feat';
+}
+
+.feat {
+  grid-area: feat;
+  border-style: solid;
+  border-width: 1px; 
+  padding: 5px;
+}
   
-  .grid-container > div {
-      background-color: rgba(255, 255, 255, 0.8);
-      text-align: center;
-      padding: 20px 0;
-    }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'char char char'
+    'firstCol points traits'
+    'firstCol points traits'
+    'firstCol points traits'
+    'firstCol points traits';
+  grid-gap: 10px;
+  padding: 1vw;
+  background-color: white;
+  border-style: inset;
+  border-color: red;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  font-size: 1vw;
+}
+  
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.autoGenerate {
+  display: grid;
+  justify-content: center;
+}
