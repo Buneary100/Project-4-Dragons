@@ -1,3 +1,5 @@
+const abilityScores = [ "str", "dex", "con", "int", "wis", "char"];
+
 function applyProficiency(id){
     // add proficiency bonus to id
     let idnum = parseInt(document.getElementById(id).value);
@@ -85,6 +87,20 @@ function onChangeAbilityModifier(abil) {
     document.getElementById(idmodifier).value = modifier;
 }
 
+function resetCheckboxes() {
+    const boxes = ["checkStrSavingThrow", "checkAthletics", 
+    "checkDexSavingThrow", "checkAcrobatics", "checkSleightOfHand", "checkStealth", 
+    "checkConSavingThrow", 
+    "checkIntSavingThrow", "checkArcana", "checkHistory", "checkInvestigation", "checkNature", "checkReligion", 
+    "checkWisSavingThrow", "checkAnimalHandling", "checkInsight", "checkMedicine", "checkPerception", "checkSurvival", 
+    "checkCharSavingThrow", "checkDeception", "checkIntimidation", "checkPerformance", "checkPersuasion"];
+
+    for (let i = 0; i < 24; i++)
+    {
+        document.getElementById(boxes[i]).checked = false;
+    }
+}
+
 function determineModifier(score) {
     const threshold = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 30];
     modifier = -5;
@@ -100,23 +116,20 @@ function determineModifier(score) {
 }
 
 function fillBaseMod() {
-    onChangeAbilityModifier("str");
-    onChangeAbilityModifier("dex");
-    onChangeAbilityModifier("con");
-    onChangeAbilityModifier("int");
-    onChangeAbilityModifier("wis");
-    onChangeAbilityModifier("char");
+    for (let i = 0; i < 6; i++)
+    {
+        onChangeAbilityModifier(abilityScores[i]);
+    }
 }
 
 function fillAbilityScore() {
-    document.getElementById("str").value = rollAbilityScore();
-    document.getElementById("dex").value = rollAbilityScore();
-    document.getElementById("con").value = rollAbilityScore();
-    document.getElementById("int").value = rollAbilityScore();
-    document.getElementById("wis").value = rollAbilityScore();
-    document.getElementById("char").value = rollAbilityScore();
+    for (let i = 0; i < 6; i++)
+    {
+        document.getElementById(abilityScores[i]).value = rollAbilityScore();
+    }
     fillBaseMod();
     fillSkillModifiers();
+    resetCheckboxes();
 }
 
 function rollAbilityScore() {
