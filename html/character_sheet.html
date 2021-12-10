@@ -52,129 +52,129 @@
       </div>
       <div class="abilScore">
         <label id="str_label">Strength</label> <br>
-        <input type="text" id="str" maxlength="2" size="2"> <br>
+        <input type="text" id="str" maxlength="2" size="2" onchange="onChangeAbilityModifier('str')"> <br>
         <input type="text" id="strModifier" maxlength="3" size="3" READONLY> <br>
 
         <label id="dex_label">Dexterity</label> <br>
-        <input type="text" id="dex" maxlength="2" size="2"> <br>
+        <input type="text" id="dex" maxlength="2" size="2" onchange="onChangeAbilityModifier('dex')"> <br>
         <input type="text" id="dexModifier" maxlength="3" size="3" READONLY> <br>
 
         <label id="con_label">Constitution</label> <br>
-        <input type="text" id="con" maxlength="2" size="2"> <br>
+        <input type="text" id="con" maxlength="2" size="2" onchange="onChangeAbilityModifier('con')"> <br>
         <input type="text" id="conModifier" maxlength="3" size="3" READONLY> <br>
 
         <label id="int_label">Intelligence</label> <br>
-        <input type="text" id="int" maxlength="2" size="2"> <br>
+        <input type="text" id="int" maxlength="2" size="2" onchange="onChangeAbilityModifier('int')"> <br>
         <input type="text" id="intModifier" maxlength="3" size="3" READONLY> <br>
 
         <label id="wis_label">Wisdom</label> <br>
-        <input type="text" id="wis" maxlength="2" size="2"> <br>
+        <input type="text" id="wis" maxlength="2" size="2" onchange="onChangeAbilityModifier('wis')"> <br>
         <input type="text" id="wisModifier" maxlength="3" size="3" READONLY> <br>
 
         <label id="char_label">Charisma</label> <br>
-        <input type="text" id="char" maxlength="2" size="2"> <br>
+        <input type="text" id="char" maxlength="2" size="2" onchange="onChangeAbilityModifier('char')"> <br>
         <input type="text" id="charModifier" maxlength="3" size="3" READONLY> <br>
 
       </div>
       <div class="skills">
-        <input type="checkbox" id="strSavingThrow">
+        <input type="checkbox" id="checkStrSavingThrow">
         <input type="text" id="strSavingThrow" maxlength="3" size="3" READONLY />
         <label for="strSavingThrow_label">Str Saving Throws</label><br>
 
-        <input type="checkbox" id="athletics">
+        <input type="checkbox" id="checkAthletics">
         <input type="text" id="athletics" maxlength="3" size="3" READONLY />
         <label for="athletics_label">Athletics</label><br>
         <!-- </div>
       <div class="skills"> -->
-        <input type="checkbox" id="dexSavingThrow">
+        <input type="checkbox" id="checkDexSavingThrow">
         <input type="text" id="dexSavingThrow" maxlength="3" size="3" READONLY />
         <label for="dexSavingThrow_label">Dex Saving Throws</label><br>
 
-        <input type="checkbox" id="acrobatics">
+        <input type="checkbox" id="checkAcrobatics">
         <input type="text" id="acrobatics" maxlength="3" size="3" READONLY />
         <label for="arcobatics_label">Acrobatics</label><br>
 
-        <input type="checkbox" id="sleightOfHand">
+        <input type="checkbox" id="checkSleightOfHand">
         <input type="text" id="sleightOfHand" maxlength="3" size="3" READONLY />
         <label for="sleightOfHand_label">Sleight of hand</label><br>
 
-        <input type="checkbox" id="stealth">
+        <input type="checkbox" id="checkStealth">
         <input type="text" id="stealth" maxlength="3" size="3" READONLY />
         <label for="stealth_label">Stealth</label><br>
         <!-- </div>
       <div class="skills"> -->
-        <input type="checkbox" id="conSavingThrow">
+        <input type="checkbox" id="checkConSavingThrow">
         <input type="text" id="conSavingThrow" maxlength="3" size="3" READONLY />
         <label for="conSavingThrow_label">Con Saving Throws</label><br>
         <!-- </div>
       <div class="skills"> -->
-        <input type="checkbox" id="intSavingThrow">
+        <input type="checkbox" id="checkIntSavingThrow">
         <input type="text" id="intSavingThrow" maxlength="3" size="3" READONLY />
         <label for="dexSavingThrow_label">Int Saving Throws</label><br>
 
-        <input type="checkbox" id="arcana">
+        <input type="checkbox" id="checkArcana">
         <input type="text" id="arcana" maxlength="3" size="3" READONLY />
         <label for="arcana_label">Arcana</label><br>
 
-        <input type="checkbox" id="history">
+        <input type="checkbox" id="checkHistory">
         <input type="text" id="history" maxlength="3" size="3" READONLY />
         <label for="history_label">History</label><br>
 
-        <input type="checkbox" id="investigation">
+        <input type="checkbox" id="checkInvestigation">
         <input type="text" id="investigation" maxlength="3" size="3" READONLY />
         <label for="investigation_label">Investigation</label><br>
 
-        <input type="checkbox" id="nature">
+        <input type="checkbox" id="checkNature">
         <input type="text" id="nature" maxlength="3" size="3" READONLY />
         <label for="nature_label">Nature</label><br>
 
-        <input type="checkbox" id="religion">
+        <input type="checkbox" id="checkReligion">
         <input type="text" id="religion" maxlength="3" size="3" READONLY />
         <label for="religion_label">Religion</label><br>
         <!-- </div>
       <div class="skills"> -->
-        <input type="checkbox" id="wisSavingThrow">
+        <input type="checkbox" id="checkWisSavingThrow">
         <input type="text" id="wisSavingThrow" maxlength="3" size="3" READONLY />
         <label for="wisSavingThrow_label">Wis Saving Throws</label><br>
 
-        <input type="checkbox" id="animalHandling">
+        <input type="checkbox" id="checkAnimalHandling">
         <input type="text" id="animalHandling" maxlength="3" size="3" READONLY />
         <label for="animalHandling_label">Animal Handling</label><br>
 
-        <input type="checkbox" id="insight">
+        <input type="checkbox" id="checkInsight">
         <input type="text" id="insight" maxlength="3" size="3" READONLY />
         <label for="insight_label">Insight</label><br>
 
-        <input type="checkbox" id="medicine">
+        <input type="checkbox" id="checkMedicine">
         <input type="text" id="medicine" maxlength="3" size="3" READONLY />
         <label for="medicine_label">Medicine</label><br>
 
-        <input type="checkbox" id="perception">
+        <input type="checkbox" id="checkPerception">
         <input type="text" id="perception" maxlength="3" size="3" READONLY />
         <label for="perception_label">Perception</label><br>
 
-        <input type="checkbox" id="survival">
+        <input type="checkbox" id="checkSurvival">
         <input type="text" id="survival" maxlength="3" size="3" READONLY />
         <label for="survival_label">Survival</label><br>
         <!-- </div>
       <div class="skills"> -->
-        <input type="checkbox" id="charSavingThrow">
+        <input type="checkbox" id="checkCharSavingThrow">
         <input type="text" id="charSavingThrow" maxlength="3" size="3" READONLY />
         <label for="charSavingThrow_label">Char Saving Throws</label><br>
 
-        <input type="checkbox" id="deception">
+        <input type="checkbox" id="checkDeception">
         <input type="text" id="deception" maxlength="3" size="3" READONLY />
         <label for="deception_label">Deception</label><br>
 
-        <input type="checkbox" id="intimidation">
+        <input type="checkbox" id="checkIntimidation">
         <input type="text" id="intimidation" maxlength="3" size="3" READONLY />
         <label for="intimidation_label">Intimidation</label><br>
 
-        <input type="checkbox" id="performance">
+        <input type="checkbox" id="checkPerformance">
         <input type="text" id="performance" maxlength="3" size="3" READONLY />
         <label for="performance_label">Performance</label><br>
 
-        <input type="checkbox" id="persuasion">
+        <input type="checkbox" id="checkPersuasion">
         <input type="text" id="persuasion" maxlength="3" size="3" READONLY />
         <label for="persuasion_label">Persuasion</label><br>
       </div>
