@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Login Page</title>
+    <link rel="icon" href="..\images\dragonIcon.png" type="image/png" sizes="16x16">
     <link href="../css/styles.css" rel="stylesheet" type="text/css">
     <link href="../css/login_page.css" rel="stylesheet" type="text/css">
   </head>
@@ -10,13 +11,24 @@
   </header>
   <body>
     <form class="log">
-      <label for="username">Username:</label><br>
-      <input type="text" id="username" name="username"><br>
-      <label for="password">Password:</label><br>
-      <input type="text" id="password" name="password">
+      <h2>Login</h2>
+      <label for="logUsername">Username:</label><br>
+      <input type="text" id="logUsername" name="logUsername"><br>
+      <label for="logPassword">Password:</label><br>
+      <input type="text" id="logPassword" name="logPassword">
 
-      <button type="button" id="loginButton" name = "loginButton" onClick="login(); fillBaseMod();">Click Me!</button>
-      
+      <button type="button" id="loginButton" name = "loginButton" onClick="login()">Log in Account</button>
     </form>
+
+    <form class="reg">
+      <h2>Register</h2>
+      <label for="regUsername">Username:</label><br>
+      <input type="text" id="regUsername" name="regUsername"><br>
+      <label for="regPassword">Password:</label><br>
+      <input type="text" id="regPassword" name="regPassword">
+
+      <button type="button" id="registerButton" name = "registerButton" onClick="register();">Register Account</button>
+    </form>
+
   </body>
 </html>
