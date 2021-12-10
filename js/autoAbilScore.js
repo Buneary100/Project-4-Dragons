@@ -2,17 +2,80 @@ function applyProficiency(id){
     // add proficiency bonus to id
     let idnum = parseInt(document.getElementById(id).value);
     let prof = parseInt(document.getElementById("proficiencyBonus").value);
-    document.getElementById(id).value = idnum + prof;
+    let checkId = "check" + (id.charAt(0).toUpperCase() + id.slice(1));
+    let modifier;
+    if(document.getElementById(checkId).checked == true) {
+        modifier = idnum + prof;
+    } else {
+        modifier = idnum - prof;
+    }
+    if(modifier > 0) {
+        modifier = "+" + modifier;
+    }
+    if(id == "perception") {
+        document.getElementById("passivePer").value = modifier;
+    }
+    document.getElementById(id).value = modifier;
 }
 
-function fillSkillModifiers() {
 
+
+function fillSkillModifiers() {
+    strModifier();
+    dexModifier();
+    conModifier();
+    intModifier();
+    wisModifier();
+    charModifier()
 }
 
 function strModifier() {
     let mod = determineModifier(document.getElementById("str").value);
     document.getElementById("strSavingThrow").value = mod;
     document.getElementById("athletics").value = mod;
+}
+
+function dexModifier() {
+    let mod = determineModifier(document.getElementById("dex").value);
+    document.getElementById("dexSavingThrow").value = mod;
+    document.getElementById("acrobatics").value = mod;
+    document.getElementById("sleightOfHand").value = mod;
+    document.getElementById("stealth").value = mod;
+}
+
+function conModifier() {
+    let mod = determineModifier(document.getElementById("con").value);
+    document.getElementById("conSavingThrow").value = mod;
+}
+
+function intModifier() {
+    let mod = determineModifier(document.getElementById("int").value);
+    document.getElementById("intSavingThrow").value = mod;
+    document.getElementById("arcana").value = mod;
+    document.getElementById("history").value = mod;
+    document.getElementById("investigation").value = mod;
+    document.getElementById("nature").value = mod;
+    document.getElementById("religion").value = mod;
+}
+
+function wisModifier() {
+    let mod = determineModifier(document.getElementById("wis").value);
+    document.getElementById("wisSavingThrow").value = mod;
+    document.getElementById("animalHandling").value = mod;
+    document.getElementById("insight").value = mod;
+    document.getElementById("medicine").value = mod;
+    document.getElementById("perception").value = mod;
+    document.getElementById("survival").value = mod;
+    document.getElementById("passivePer").value = mod;
+}
+
+function charModifier() {
+    let mod = determineModifier(document.getElementById("char").value);
+    document.getElementById("charSavingThrow").value = mod;
+    document.getElementById("deception").value = mod;
+    document.getElementById("intimidation").value = mod;
+    document.getElementById("performance").value = mod;
+    document.getElementById("persuasion").value = mod;
 }
 
 function onChangeAbilityModifier(abil) {
@@ -53,7 +116,7 @@ function fillAbilityScore() {
     document.getElementById("wis").value = rollAbilityScore();
     document.getElementById("char").value = rollAbilityScore();
     fillBaseMod();
-    strModifier();
+    fillSkillModifiers();
 }
 
 function rollAbilityScore() {
