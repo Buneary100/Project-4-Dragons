@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    background-image: url("../Images/EldBackground.png");
+    width: 50vw;
+    margin: auto;
+    padding: 1vw;
+  }
+
+header {
+    padding: 1vh;
+    background-color: white;
+    border-style: inset;
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+  
+.log {
+    background-color: white;
+    border-style: inset;
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    padding: 4vw;
+    padding-top: 1vw;
+    line-height: 3vh;
+    text-align: center;
+}
+
+.reg {
+    background-color: white;
+    border-style: inset;
+    border-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+    padding: 4vw;
+    padding-top: 1vw;
+    line-height: 3vh;
+    text-align: center;
+}
