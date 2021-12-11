@@ -14,14 +14,15 @@
 </head>
 <div class="grid-container">
   <header>
-    <button type="button" id="saveButton" name="saveButton" onClick="">Click Me To Save!!!!</button>
   </header>
 
   <body>
     <div class="descBox">
       <div class="charName">
         <input type="text" id="characterName"> <br>
-        <label id="characterName_label">Character Name</label>
+        <label id="characterName_label">Character Name</label><br><br>
+        <button type="button" id="saveButton" name="saveButton" onClick="" style="width: 150px;"><i class="far fa-save"></i> Click Me To
+          Save!!!!</button>
       </div>
       <div class="charDesc1">
         <input type="text" id="classAndLevel"> <br>
@@ -44,271 +45,192 @@
       </div>
     </div>
     <!-- This will be the left collumn       -->
-    <div class="bonus">
-      <label id="proficiencyBonus_label">Proficiency Bonus</label>
-      <input type="text" id="proficiencyBonus" maxlength="2" size="2"> <br>
-      <label id="inspiration_label">Inspiration</label>
-      <input type="text" id="inspiration" maxlength="2" size="2">
-    </div>
-    <div class="abilScore">
-      <label id="str_label">Strength</label> <br>
-      <input type="text" id="str" maxlength="2" size="2"> <br>
-      <input type="text" id="strModifier" READONLY> <br>
-
-      <label id="dex_label">Dexterity</label> <br>
-      <input type="text" id="dex" maxlength="2" size="2"> <br>
-      <input type="text" id="dexModifier" READONLY> <br>
-
-      <label id="con_label">Constitution</label> <br>
-      <input type="text" id="con" maxlength="2" size="2"> <br>
-      <input type="text" id="conModifier" READONLY> <br>
-
-      <label id="int_label">Intelligence</label> <br>
-      <input type="text" id="int" maxlength="2" size="2"> <br>
-      <input type="text" id="intModifier" READONLY> <br>
-
-      <label id="wis_label">Wisdom</label> <br>
-      <input type="text" id="wis" maxlength="2" size="2"> <br>
-      <input type="text" id="wisModifier" READONLY> <br>
-
-      <label id="char_label">Charisma</label> <br>
-      <input type="text" id="char" maxlength="2" size="2"> <br>
-      <input type="text" id="charModifier" READONLY> <br>
-
-    </div>
-    <div>
-      <input type="checkbox" id="strSavingThrow">
-      <input type="text" id="strSavingThrow" READONLY />
-      <label for="strSavingThrow_label">Saving Throws</label><br>
-
-      <input type="checkbox" id="athletics">
-      <input type="text" id="athletics" READONLY />
-      <label for="athletics_label">Athletics</label>
-    </div>
-    <div>
-      <input type="checkbox" id="dexSavingThrow">
-      <input type="text" id="dexSavingThrow" READONLY />
-      <label for="dexSavingThrow_label">Saving Throws</label><br>
-
-      <input type="checkbox" id="arcobatics">
-      <input type="text" id="arcobatics" READONLY />
-      <label for="arcobatics_label">Arcobatics</label><br>
-
-      <input type="checkbox" id="sleightOfHand">
-      <input type="text" id="sleightOfHand" READONLY />
-      <label for="sleightOfHand_label">Sleight of hand</label><br>
-
-      <input type="checkbox" id="stealth">
-      <input type="text" id="stealth" READONLY />
-      <label for="stealth_label">Stealth</label><br>
-    </div>
-    <div>
-      <input type="checkbox" id="conSavingThrow">
-      <input type="text" id="conSavingThrow" READONLY />
-      <label for="conSavingThrow_label">Saving Throws</label><br>
-    </div>
-    <div>
-      <input type="checkbox" id="intSavingThrow">
-      <input type="text" id="intSavingThrow" READONLY />
-      <label for="dexSavingThrow_label">Saving Throws</label><br>
-
-      <input type="checkbox" id="arcana">
-      <input type="text" id="arcana" READONLY />
-      <label for="arcana_label">Arcana</label><br>
-
-      <input type="checkbox" id="history">
-      <input type="text" id="history" READONLY />
-      <label for="history_label">History</label><br>
-
-      <input type="checkbox" id="investigation">
-      <input type="text" id="investigation" READONLY />
-      <label for="investigation_label">Investigation</label><br>
-
-      <input type="checkbox" id="nature">
-      <input type="text" id="nature" READONLY />
-      <label for="nature_label">Nature</label><br>
-
-      <input type="checkbox" id="religion">
-      <input type="text" id="religion" READONLY />
-      <label for="religion_label">Religion</label><br>
-    </div>
-    <div>
-      <input type="checkbox" id="wisSavingThrow">
-      <input type="text" id="wisSavingThrow" READONLY />
-      <label for="wisSavingThrow_label">Saving Throws</label><br>
-
-      <input type="checkbox" id="animalHandling">
-      <input type="text" id="animalHandling" READONLY />
-      <label for="animalHandling_label">Animal Handling</label><br>
-
-      <input type="checkbox" id="insight">
-      <input type="text" id="insight" READONLY />
-      <label for="insight_label">Insight</label><br>
-
-      <input type="checkbox" id="medicine">
-      <input type="text" id="medicine" READONLY />
-      <label for="medicine_label">Medicine</label><br>
-
-      <input type="checkbox" id="perception">
-      <input type="text" id="perception" READONLY />
-      <label for="perception_label">Perception</label><br>
-
-      <input type="checkbox" id="survival">
-      <input type="text" id="survival" READONLY />
-      <label for="survival_label">Survival</label><br>
-    </div>
-    <div>
-      <input type="checkbox" id="charSavingThrow">
-      <input type="text" id="charSavingThrow" READONLY />
-      <label for="charSavingThrow_label">Saving Throws</label><br>
-
-      <input type="checkbox" id="deception">
-      <input type="text" id="deception" READONLY />
-      <label for="deception_label">Deception</label><br>
-
-      <input type="checkbox" id="intimidation">
-      <input type="text" id="intimidation" READONLY />
-      <label for="intimidation_label">Intimidation</label><br>
-
-      <input type="checkbox" id="performance">
-      <input type="text" id="performance" READONLY />
-      <label for="performance_label">Performance</label><br>
-
-      <input type="checkbox" id="persuasion">
-      <input type="text" id="persuasion" READONLY />
-      <label for="persuasion_label">Persuasion</label><br>
-    </div>
-</div>
-<div class="passPer">
-  <label id="passivePer_label">Passive Wisdom (Perception)</label>
-  <input type="text" id="passivePer" maxlength="2" size="2" READONLY>
-</div>
-</div>
-
-<div>
-  <div>
-
-
-    <!-- This will be the middle collumn       -->
-    <div>
-
-      <div>
-        <input type="text" id="armorClass" />
-        <label for="armorClass_label">Armor Class</label>
+    <div class="firstCol">
+      <div class="inspiration">
+        <input type="text" id="proficiencyBonus" maxlength="2" size="1">
+        <label id="proficiencyBonus_label">Proficiency Bonus</label> <br>
+        <input type="text" id="inspiration" maxlength="2" size="1">
+        <label id="inspiration_label">Inspiration</label>
       </div>
+      <div class="abilScore">
+        <label id="str_label"><i class="fas fa-dumbbell"></i> Strength</label> <br>
+        <input type="text" id="str" maxlength="2" size="1" onchange="onChangeAbilityModifier('str')"> <br>
+        <input type="text" id="strModifier" maxlength="3" size="1" READONLY> <br>
 
-      <div>
-        <input type="text" id="initiative" />
-        <label for="initiative_label">Initiative</label>
+        <label id="dex_label"><i class="fas fa-running"></i> Dexterity</label> <br>
+        <input type="text" id="dex" maxlength="2" size="1" onchange="onChangeAbilityModifier('dex')"> <br>
+        <input type="text" id="dexModifier" maxlength="3" size="1" READONLY> <br>
+
+        <label id="con_label"><i class="fas fa-heart"></i> Constitution</label> <br>
+        <input type="text" id="con" maxlength="2" size="1" onchange="onChangeAbilityModifier('con')"> <br>
+        <input type="text" id="conModifier" maxlength="3" size="1" READONLY> <br>
+
+        <label id="int_label"><i class="fas fa-brain"></i> Intelligence</label> <br>
+        <input type="text" id="int" maxlength="2" size="1" onchange="onChangeAbilityModifier('int')"> <br>
+        <input type="text" id="intModifier" maxlength="3" size="1" READONLY> <br>
+
+        <label id="wis_label"><i class="fas fa-lightbulb"></i> Wisdom</label> <br>
+        <input type="text" id="wis" maxlength="2" size="1" onchange="onChangeAbilityModifier('wis')"> <br>
+        <input type="text" id="wisModifier" maxlength="3" size="1" READONLY> <br>
+
+        <label id="char_label"><i class="fas fa-comment-dots"></i> Charisma</label> <br>
+        <input type="text" id="char" maxlength="2" size="1" onchange="onChangeAbilityModifier('char')"> <br>
+        <input type="text" id="charModifier" maxlength="3" size="1" READONLY> <br>
+
       </div>
+      <div class="skills">
+        <input type="checkbox" id="checkStrSavingThrow" onchange="applyProficiency('strSavingThrow')">
+        <input type="text" id="strSavingThrow" maxlength="3" size="1" READONLY />
+        <label for="strSavingThrow_label"><i class="fas fa-dumbbell"></i> Str Saving Throws</label><br>
 
-      <div>
-        <input type="text" id="speed" />
-        <label for="speed_label">Speed</label>
+        <input type="checkbox" id="checkAthletics" onchange="applyProficiency('athletics')">
+        <input type="text" id="athletics" maxlength="3" size="1" READONLY />
+        <label for="athletics_label">Athletics</label><br>
+        <!-- </div>
+      <div class="skills"> -->
+        <input type="checkbox" id="checkDexSavingThrow" onchange="applyProficiency('dexSavingThrow')">
+        <input type="text" id="dexSavingThrow" maxlength="3" size="1" READONLY />
+        <label for="dexSavingThrow_label"><i class="fas fa-running"></i> Dex Saving Throws</label><br>
+
+        <input type="checkbox" id="checkAcrobatics" onchange="applyProficiency('acrobatics')">
+        <input type="text" id="acrobatics" maxlength="3" size="1" READONLY />
+        <label for="arcobatics_label">Acrobatics</label><br>
+
+        <input type="checkbox" id="checkSleightOfHand" onchange="applyProficiency('sleightOfHand')">
+        <input type="text" id="sleightOfHand" maxlength="3" size="1" READONLY />
+        <label for="sleightOfHand_label">Sleight of hand</label><br>
+
+        <input type="checkbox" id="checkStealth" onchange="applyProficiency('stealth')">
+        <input type="text" id="stealth" maxlength="3" size="1" READONLY />
+        <label for="stealth_label">Stealth</label><br>
+        <!-- </div>
+      <div class="skills"> -->
+        <input type="checkbox" id="checkConSavingThrow" onchange="applyProficiency('conSavingThrow')">
+        <input type="text" id="conSavingThrow" maxlength="3" size="1" READONLY />
+        <label for="conSavingThrow_label"><i class="fas fa-heart"></i> Con Saving Throws</label><br>
+        <!-- </div>
+      <div class="skills"> -->
+        <input type="checkbox" id="checkIntSavingThrow" onchange="applyProficiency('intSavingThrow')">
+        <input type="text" id="intSavingThrow" maxlength="3" size="1" READONLY />
+        <label for="dexSavingThrow_label"><i class="fas fa-brain"></i> Int Saving Throws</label><br>
+
+        <input type="checkbox" id="checkArcana" onchange="applyProficiency('arcana')">
+        <input type="text" id="arcana" maxlength="3" size="1" READONLY />
+        <label for="arcana_label">Arcana</label><br>
+
+        <input type="checkbox" id="checkHistory" onchange="applyProficiency('history')">
+        <input type="text" id="history" maxlength="3" size="1" READONLY />
+        <label for="history_label">History</label><br>
+
+        <input type="checkbox" id="checkInvestigation" onchange="applyProficiency('investigation')">
+        <input type="text" id="investigation" maxlength="3" size="1" READONLY />
+        <label for="investigation_label">Investigation</label><br>
+
+        <input type="checkbox" id="checkNature" onchange="applyProficiency('nature')">
+        <input type="text" id="nature" maxlength="3" size="1" READONLY />
+        <label for="nature_label">Nature</label><br>
+
+        <input type="checkbox" id="checkReligion" onchange="applyProficiency('religion')">
+        <input type="text" id="religion" maxlength="3" size="1" READONLY />
+        <label for="religion_label">Religion</label><br>
+        <!-- </div>
+      <div class="skills"> -->
+        <input type="checkbox" id="checkWisSavingThrow" onchange="applyProficiency('wisSavingThrow')">
+        <input type="text" id="wisSavingThrow" maxlength="3" size="1" READONLY />
+        <label for="wisSavingThrow_label"><i class="fas fa-lightbulb"></i> Wis Saving Throws</label><br>
+
+        <input type="checkbox" id="checkAnimalHandling" onchange="applyProficiency('animalHandling')">
+        <input type="text" id="animalHandling" maxlength="3" size="1" READONLY />
+        <label for="animalHandling_label">Animal Handling</label><br>
+
+        <input type="checkbox" id="checkInsight" onchange="applyProficiency('insight')">
+        <input type="text" id="insight" maxlength="3" size="1" READONLY />
+        <label for="insight_label">Insight</label><br>
+
+        <input type="checkbox" id="checkMedicine" onchange="applyProficiency('medicine')">
+        <input type="text" id="medicine" maxlength="3" size="1" READONLY />
+        <label for="medicine_label">Medicine</label><br>
+
+        <input type="checkbox" id="checkPerception" onchange="applyProficiency('perception')">
+        <input type="text" id="perception" maxlength="3" size="1" READONLY />
+        <label for="perception_label">Perception</label><br>
+
+        <input type="checkbox" id="checkSurvival" onchange="applyProficiency('survival')">
+        <input type="text" id="survival" maxlength="3" size="1" READONLY />
+        <label for="survival_label">Survival</label><br>
+        <!-- </div>
+      <div class="skills"> -->
+        <input type="checkbox" id="checkCharSavingThrow" onchange="applyProficiency('charSavingThrow')">
+        <input type="text" id="charSavingThrow" maxlength="3" size="1" READONLY />
+        <label for="charSavingThrow_label"><i class="fas fa-comment-dots"></i> Char Saving Throws</label><br>
+
+        <input type="checkbox" id="checkDeception" onchange="applyProficiency('deception')">
+        <input type="text" id="deception" maxlength="3" size="1" READONLY />
+        <label for="deception_label">Deception</label><br>
+
+        <input type="checkbox" id="checkIntimidation" onchange="applyProficiency('intimidation')">
+        <input type="text" id="intimidation" maxlength="3" size="1" READONLY />
+        <label for="intimidation_label">Intimidation</label><br>
+
+        <input type="checkbox" id="checkPerformance" onchange="applyProficiency('performance')">
+        <input type="text" id="performance" maxlength="3" size="1" READONLY />
+        <label for="performance_label">Performance</label><br>
+
+        <input type="checkbox" id="checkPersuasion" onchange="applyProficiency('persuasion')">
+        <input type="text" id="persuasion" maxlength="3" size="1" READONLY />
+        <label for="persuasion_label">Persuasion</label><br>
       </div>
-
+      <div class="passPer">
+        <input type="text" id="passivePer" maxlength="3" size="1" READONLY />
+        <label id="passivePer_label"><i class="fas fa-eye"></i> Passive Wisdom (Perception)</label>
+      </div>
+      <div class="prof">
+        <textarea name="note" id="otherProficienciesAndLanguages" cols="35vw" rows="15"
+          placeholder="Type something..."></textarea><br>
+        <label id="otherProficienciesAndLanguages_label">Other Proficiencies & Languages</label>
+      </div>
     </div>
-
-    <div>
-      <input type="text" id="hitPointMaximum" />
-      <label for="hitPointMaximum_label">Hit Point Maximum</label><br>
-
-      <input type="text" id="currentHitPoints" />
-      <label for="currentHitPoints_label">Current Hit Points</label>
-
-    </div>
-    <input type="text" id="tempHitPoints" />
-    <label for="tempHitPoints_label">Temporary Hit Points</label>
-  </div>
-
-  <div>
-    <div>
-      <input type="text" id="hitDice" />
-      <label for="hitDice_label">Hit Dice</label>
-    </div>
-
-    <div>
-      <label for="successses_label">Successses</label>
-      <input type="checkbox" id="successsesOne">
-      <input type="checkbox" id="successsesTwo">
-      <input type="checkbox" id="successsesThree"><br>
-
-      <label for="failures_label">Failures</label>
-      <input type="checkbox" id="failuresOne">
-      <input type="checkbox" id="failuresTwo">
-      <input type="checkbox" id="failuresThree"><br>
-
-      <label for="deathSaves_label">Death Saves</label>
-    </div>
-  </div>
-
-
-  <div>
-
-    <div>
-      <label for="attacksAndSpellcastingName_label">Name</label><br>
-      <input type="text" id="attacksAndSpellcastingNameOne" /><br>
-      <input type="text" id="attacksAndSpellcastingNameTwo" /><br>
-      <input type="text" id="attacksAndSpellcastingNameThree" /><br>
-      
-      <label for="attacksAndSpellcastingAtkBonus_label">Atk Bonus</label><br>
-      <input type="text" id="attacksAndSpellcastingAtkBonusOne" /><br>
-      <input type="text" id="attacksAndSpellcastingAtkBonusTwo" /><br>
-      <input type="text" id="attacksAndSpellcastingAtkBonusThree" /><br>
-
-      <label for="attacksAndSpellcastingDamageOrType_label">Damage/Type</label><br>
-      <input type="text" id="attacksAndSpellcastingDamageOrTypeOne" /><br>
-      <input type="text" id="attacksAndSpellcastingDamageOrTypeTwo" /><br>
-      <input type="text" id="attacksAndSpellcastingDamageOrTypeThree" /><br>
-    </div>
-
-    <div>
-      <input type="text" id="attacksAndSpellcasting" /><br>
-      <label for="attacksAndSpellcasting_label">Attacks & Spellcasting</label>
-    </div>
-
-  </div>
-</div>
-
-<div>
-  <!-- This will be the right collumn       -->
-</div>
-<div>
-  <label id="featuresAndTraits_label">Features & Traits</label>
-  <input type="text" placeholder="Type something..." id="featuresAndTraits">
-</div>
-</body>
-
-<footer>
-  <div>
-    <div>
-      <label id="otherProficienciesAndLanguages_label">Other Proficiencies & Languages</label>
-      <input type="text" placeholder="Type something..." id="otherProficienciesAndLanguages">
-    </div>
-
-    <div>
-      <label id="equipmentAndCharacterNotes_label">Equipment And Character Notes</label>
-      <input type="text" placeholder="Type something..." id="equipmentAndCharacterNotes">
-      <ul>
-        <li>
+    <div class="points">
+      <!-- This will be the middle collumn       -->
+      <div class="stuff">
+        <div class="equipment">
+          <textarea name="note" id="equipmentAndCharacterNotes" cols="35vw" rows="15"
+            placeholder="Type something..."></textarea><br>
+          <label id="equipmentAndCharacterNotes_label">Equipment And Character Notes</label><br>
+        </div>
+        <div class="money">
+          <i class="fas fa-coins fa-5x"></i><br>
           <label for="copperPieces_label">Copper Pieces</label>
-          <input type="text" id="copperPieces" /><br>
-        </li>
-        <li>
+          <input type="text" id="copperPieces" maxlength="5" size="5" /><br>
           <label for="sleightOfHand_label">Silver Pieces</label>
-          <input type="text" id="silverPieces" /><br>
-        </li>
-        <li>
+          <input type="text" id="silverPieces" maxlength="5" size="5" /><br>
           <label for="goldPieces_label">Gold Pieces</label>
-          <input type="text" id="goldPieces" /><br>
-        </li>
-        <li>
+          <input type="text" id="goldPieces" maxlength="5" size="5" /><br>
           <label for="platinumPieces_label">Platium Pieces</label>
-          <input type="text" id="platinumPieces" />
-        </li>
-      </ul>
+          <input type="text" id="platinumPieces" maxlength="5" size="5" />
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+
+    <div class="traits">
+      <!-- This will be the right collumn       -->
+      <div class="feat">
+        <textarea name="note" id="featuresAndTraits" cols="35vw" rows="15"
+          placeholder="Type something..."></textarea><br>
+        <label id="featuresAndTraits_label">Features & Traits</label>
+      </div>
+    </div>
+
+
+    <!-- <input type="text" READONLY/>  -->
+  </body>
+
+  <footer>
+    <div class="autoGenerate">
+      <button type="button" id="autoRoll" name="autoRoll" onClick="fillAbilityScore()" style="width: 150px;"><i class="fas fa-dice"></i>
+        Auto Roll
+        Ability
+        Scores</button>
+    </div>
 
 </html>
