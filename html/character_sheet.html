@@ -7,21 +7,21 @@
   <meta charset="UTF-8">
   <title>Character Sheet</title>
   <link rel="icon" href="..\images\dragonIcon.png" type="image/png" sizes="16x16">
-  <script src="https://kit.fontawesome.com/0ddaa4c2d2.js" crossorigin="anonymous"></script>  <link href="../css/styles.css" rel="stylesheet" type="text/css">
+  <script src="https://kit.fontawesome.com/0ddaa4c2d2.js" crossorigin="anonymous"></script>
+  <link href="../css/styles.css" rel="stylesheet" type="text/css">
   <link href="../css/character_sheet.css" rel="stylesheet" type="text/css">
   <script type="text/javascript" src="../js/autoAbilScore.js"></script>
   <script type="text/javascript" src="../js/character.js"></script>
 </head>
 <div class="grid-container">
-  <header>
-  </header>
 
   <body>
     <div class="descBox">
       <div class="charName">
         <input type="text" id="characterName"> <br>
         <label id="characterName_label">Character Name</label><br><br>
-        <button type="button" id="saveButton" name="saveButton" onClick="" style="width: 150px;"><i class="far fa-save"></i> Click Me To
+        <button type="button" id="saveButton" name="saveButton" onClick="" style="width: 150px;"><i
+            class="far fa-save"></i> Click Me To
           Save!!!!</button>
       </div>
       <div class="charDesc1">
@@ -192,25 +192,91 @@
     </div>
     <div class="points">
       <!-- This will be the middle collumn       -->
-      <div class="stuff">
-        <div class="equipment">
-          <textarea name="note" id="equipmentAndCharacterNotes" cols="35vw" rows="15"
-            placeholder="Type something..."></textarea><br>
-          <label id="equipmentAndCharacterNotes_label">Equipment And Character Notes</label><br>
+      <div class="armor">
+        <input type="text" id="armorClass" />
+        <label for="armorClass_label">Armor Class</label>
+      </div>
+
+      <div class="initative">
+        <input type="text" id="initiative" />
+        <label for="initiative_label">Initiative</label>
+      </div>
+
+      <div class="speed">
+        <input type="text" id="speed" />
+        <label for="speed_label">Speed</label>
+      </div>
+      <div class="hit">
+        <div>
+          <input type="text" id="hitPointMaximum" />
+          <label for="hitPointMaximum_label">Hit Point Maximum</label><br>
+
+          <input type="text" id="currentHitPoints" />
+          <label for="currentHitPoints_label">Current Hit Points</label>
+
         </div>
-        <div class="money">
-          <i class="fas fa-coins fa-5x"></i><br>
-          <label for="copperPieces_label">Copper Pieces</label>
-          <input type="text" id="copperPieces" maxlength="5" size="5" /><br>
-          <label for="sleightOfHand_label">Silver Pieces</label>
-          <input type="text" id="silverPieces" maxlength="5" size="5" /><br>
-          <label for="goldPieces_label">Gold Pieces</label>
-          <input type="text" id="goldPieces" maxlength="5" size="5" /><br>
-          <label for="platinumPieces_label">Platium Pieces</label>
-          <input type="text" id="platinumPieces" maxlength="5" size="5" />
+        <input type="text" id="tempHitPoints" />
+        <label for="tempHitPoints_label">Temporary Hit Points</label>
+        <div>
+          <input type="text" id="hitDice" />
+          <label for="hitDice_label">Hit Dice</label>
         </div>
       </div>
+
+
+      <div>
+        <label for="successses_label">Successes</label>
+        <input type="checkbox" id="successesOne">
+        <input type="checkbox" id="successesTwo">
+        <input type="checkbox" id="successesThree"><br>
+
+        <label for="failures_label">Failures</label>
+        <input type="checkbox" id="failuresOne">
+        <input type="checkbox" id="failuresTwo">
+        <input type="checkbox" id="failuresThree"><br>
+
+        <label for="deathSaves_label">Death Saves</label>
+      </div>
+    <div>
+      <label for="attacksAndSpellcastingName_label">Name</label><br>
+      <input type="text" id="attacksAndSpellcastingNameOne" /><br>
+      <input type="text" id="attacksAndSpellcastingNameTwo" /><br>
+      <input type="text" id="attacksAndSpellcastingNameThree" /><br>
+
+      <label for="attacksAndSpellcastingAtkBonus_label">Atk Bonus</label><br>
+      <input type="text" id="attacksAndSpellcastingAtkBonusOne" /><br>
+      <input type="text" id="attacksAndSpellcastingAtkBonusTwo" /><br>
+      <input type="text" id="attacksAndSpellcastingAtkBonusThree" /><br>
+
+      <label for="attacksAndSpellcastingDamageOrType_label">Damage/Type</label><br>
+      <input type="text" id="attacksAndSpellcastingDamageOrTypeOne" /><br>
+      <input type="text" id="attacksAndSpellcastingDamageOrTypeTwo" /><br>
+      <input type="text" id="attacksAndSpellcastingDamageOrTypeThree" /><br>
     </div>
+
+    <div>
+      <input type="text" id="attacksAndSpellcasting" /><br>
+      <label for="attacksAndSpellcasting_label">Attacks & Spellcasting</label>
+    </div>
+    <div class="stuff">
+      <div class="equipment">
+        <textarea name="note" id="equipmentAndCharacterNotes" cols="35vw" rows="15"
+          placeholder="Type something..."></textarea><br>
+        <label id="equipmentAndCharacterNotes_label">Equipment And Character Notes</label><br>
+      </div>
+      <div class="money">
+        <i class="fas fa-coins fa-5x"></i><br>
+        <label for="copperPieces_label">Copper Pieces</label>
+        <input type="text" id="copperPieces" maxlength="5" size="5" /><br>
+        <label for="sleightOfHand_label">Silver Pieces</label>
+        <input type="text" id="silverPieces" maxlength="5" size="5" /><br>
+        <label for="goldPieces_label">Gold Pieces</label>
+        <input type="text" id="goldPieces" maxlength="5" size="5" /><br>
+        <label for="platinumPieces_label">Platium Pieces</label>
+        <input type="text" id="platinumPieces" maxlength="5" size="5" />
+      </div>
+    </div>
+  </div>
 
     <div class="traits">
       <!-- This will be the right collumn       -->
@@ -222,12 +288,14 @@
     </div>
 
 
+
     <!-- <input type="text" READONLY/>  -->
   </body>
 
   <footer>
     <div class="autoGenerate">
-      <button type="button" id="autoRoll" name="autoRoll" onClick="fillAbilityScore()" style="width: 150px;"><i class="fas fa-dice"></i>
+      <button type="button" id="autoRoll" name="autoRoll" onClick="fillAbilityScore()" style="width: 150px;"><i
+          class="fas fa-dice"></i>
         Auto Roll
         Ability
         Scores</button>
