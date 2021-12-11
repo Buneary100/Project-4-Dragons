@@ -5,8 +5,8 @@ var path = require('path');
 const app = express();  //get an express object
 const cors = require('cors');  //avoid that nasty CORS error
 const{check, validationResults} = require('express-validator');
-const req = require('express/lib/request');
-const res = require('express/lib/response');
+//const req = require('express/lib/request');
+//const res = require('express/lib/response');
 
 const portNum = 3000;
 
@@ -28,21 +28,54 @@ con.connect(function(err) {
     console.log("Connected!");
   });
 
-
+let currentUser;
 app.post('/register', (req, res) => {
 
     const username = req.body.username;
     const password = req.body.password;
 
-    con.query("INSERT INTO login (Username, Password) VALUES (?,?)", [username, password], function(err, result){
-        if(err)
+
+    con.query("SELECT * FROM login WHERE Username = ?", username, (err, result) => {
+        if(result.length > 0)
         {
-            console.log(err.message);
+            res.send(JSON.stringify({message: 'That login exists'}));
         }
-        else
-        {
-            console.log(result.message);
+        else{
+            currentUser = username;
+            con.query("INSERT INTO login (Username, Password) VALUES (?,?)", [username, password], function(err, result){
+                if(err)
+                {
+                    console.log(err.message);
+                }
+                else
+                {
+                    console.log("worked");
+                }
+            });
+            con.query("INSERT INTO charactersheet (Username) VALUES (?)", username, function(err, result){
+                if(err)
+                {
+                    console.log(err.message);
+                }
+                else
+                {
+                    console.log("worked");
+                }
+            });
+            con.query("INSERT INTO proficiency (Username) VALUES (?)", username, function(err, result){
+                if(err)
+                {
+                    console.log(err.message);
+                }
+                else
+                {
+                    console.log("worked");
+                }
+            });
+
+            res.send(JSON.stringify({message: 'login'}));
         }
+
     });
 });
 
@@ -55,17 +88,18 @@ app.post('/login', (req, res) =>{
     con.query("SELECT * FROM login WHERE Username = ? AND Password = ?", [username, password], (err, result) => {
         if(err)
         {
-            res.send({err: err});
+            console.log(err.message);
         }
-        if(result)
+        if(result.length > 0)
         {
-            res.send(result)
+            currentUser = username;
+            res.send(JSON.stringify({message: 'login'}));
         }
         else{
-            res.send({message: "wrong username or password"});
+            res.send(JSON.stringify({message: 'wrong username or password'}));
         }
 
-    })
+    });
 
 })
 /*
