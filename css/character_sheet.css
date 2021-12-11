@@ -92,6 +92,30 @@ body {
   'stuff stuff stuff'
 }
 
+.armor {
+  grid-area: armor;
+}
+
+.initative {
+  grid-area: initative;
+}
+
+.speed {
+  grid-area: speed;
+}
+
+.hit {
+  grid-area: hit;
+}
+
+.death {
+  grid-area: death;
+}
+
+.attack {
+  grid-area: attack;
+}
+
 .equipment {
   grid-area: equipment;
   padding: 5px;
