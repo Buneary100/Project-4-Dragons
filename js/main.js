@@ -22,7 +22,7 @@ function register()
         .then(response => response.json())               // obtain json object sent from server
         .then(jsonObject => {                            // use jsonObject and get its message property
             //outputSpan.innerHTML = jsonObject.message;   // set innerHTML of span to message sent in jsonObject
-            if(jsonObject.message == 'login')
+            if(jsonObject.message != 'wrong')
             {
                 window.location.href = "../html/character_sheet.html";
             }
@@ -53,7 +53,7 @@ function login()
         .then(response => response.json())               // obtain json object sent from server
         .then(jsonObject => {                            // use jsonObject and get its message property
             //outputSpan.innerHTML = jsonObject.message;   // set innerHTML of span to message sent in jsonObject
-            if(jsonObject.message == 'login')
+            if(jsonObject.message != 'wrong')
             {
                 window.location.href = "../html/character_sheet.html";
             }

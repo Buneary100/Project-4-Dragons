@@ -10,8 +10,6 @@
   <script src="https://kit.fontawesome.com/0ddaa4c2d2.js" crossorigin="anonymous"></script>
   <link href="../css/styles.css" rel="stylesheet" type="text/css">
   <link href="../css/character_sheet.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="../js/autoAbilScore.js"></script>
-  <script type="text/javascript" src="../js/character.js"></script>
 </head>
 <div class="grid-container">
 
@@ -20,7 +18,7 @@
       <div class="charName">
         <input type="text" id="characterName"> <br>
         <label id="characterName_label">Character Name</label><br><br>
-        <button type="button" id="saveButton" name="saveButton" onClick="" style="width: 150px;"><i
+        <button type="button" id="saveButton" name="saveButton" onClick="start()" style="width: 150px;"><i
             class="far fa-save"></i> Click Me To
           Save!!!!</button>
       </div>
@@ -54,27 +52,27 @@
       </div>
       <div class="abilScore">
         <label id="str_label"><i class="fas fa-dumbbell"></i> Strength</label> <br>
-        <input type="text" id="str" maxlength="2" size="1" onchange="onChangeAbilityModifier('str')"> <br>
+        <input type="number" min ="0" id="str" maxlength="2" size="1" onchange="onChangeAbilityModifier('str')"> <br>
         <input type="text" id="strModifier" maxlength="3" size="1" READONLY> <br>
 
         <label id="dex_label"><i class="fas fa-running"></i> Dexterity</label> <br>
-        <input type="text" id="dex" maxlength="2" size="1" onchange="onChangeAbilityModifier('dex')"> <br>
+        <input type="number" min ="0" id="dex" maxlength="2" size="1" onchange="onChangeAbilityModifier('dex')"> <br>
         <input type="text" id="dexModifier" maxlength="3" size="1" READONLY> <br>
 
         <label id="con_label"><i class="fas fa-heart"></i> Constitution</label> <br>
-        <input type="text" id="con" maxlength="2" size="1" onchange="onChangeAbilityModifier('con')"> <br>
+        <input type="number" min ="0" id="con" maxlength="2" size="1" onchange="onChangeAbilityModifier('con')"> <br>
         <input type="text" id="conModifier" maxlength="3" size="1" READONLY> <br>
 
         <label id="int_label"><i class="fas fa-brain"></i> Intelligence</label> <br>
-        <input type="text" id="int" maxlength="2" size="1" onchange="onChangeAbilityModifier('int')"> <br>
+        <input type="number" min ="0" id="int" maxlength="2" size="1" onchange="onChangeAbilityModifier('int')"> <br>
         <input type="text" id="intModifier" maxlength="3" size="1" READONLY> <br>
 
         <label id="wis_label"><i class="fas fa-lightbulb"></i> Wisdom</label> <br>
-        <input type="text" id="wis" maxlength="2" size="1" onchange="onChangeAbilityModifier('wis')"> <br>
+        <input type="number" min ="0" id="wis" maxlength="2" size="1" onchange="onChangeAbilityModifier('wis')"> <br>
         <input type="text" id="wisModifier" maxlength="3" size="1" READONLY> <br>
 
         <label id="char_label"><i class="fas fa-comment-dots"></i> Charisma</label> <br>
-        <input type="text" id="char" maxlength="2" size="1" onchange="onChangeAbilityModifier('char')"> <br>
+        <input type="number" min ="0" id="char" maxlength="2" size="1" onchange="onChangeAbilityModifier('char')"> <br>
         <input type="text" id="charModifier" maxlength="3" size="1" READONLY> <br>
 
       </div>
@@ -193,29 +191,29 @@
     <div class="points">
       <!-- This will be the middle collumn       -->
       <div class="armor">
-        <input type="text" id="armorClass" />
+        <input type="number" min ="0" id="armorClass" />
         <label for="armorClass_label">Armor Class</label>
       </div>
 
       <div class="initative">
-        <input type="text" id="initiative" />
+        <input type="number" min ="0" id="initiative" />
         <label for="initiative_label">Initiative</label>
       </div>
 
       <div class="speed">
-        <input type="text" id="speed" />
+        <input type="number" min ="0" id="speed" />
         <label for="speed_label">Speed</label>
       </div>
       <div class="hit">
         <div>
-          <input type="text" id="hitPointMaximum" />
+          <input type="number" min ="0" id="hitPointMaximum" />
           <label for="hitPointMaximum_label">Hit Point Maximum</label><br>
 
-          <input type="text" id="currentHitPoints" />
+          <input type="number" min ="0" id="currentHitPoints" />
           <label for="currentHitPoints_label">Current Hit Points</label>
 
         </div>
-        <input type="text" id="tempHitPoints" />
+        <input type="number" min ="0" id="tempHitPoints" />
         <label for="tempHitPoints_label">Temporary Hit Points</label>
         <div>
           <input type="text" id="hitDice" />
@@ -267,13 +265,13 @@
       <div class="money">
         <i class="fas fa-coins fa-5x"></i><br>
         <label for="copperPieces_label">Copper Pieces</label>
-        <input type="text" id="copperPieces" maxlength="5" size="5" /><br>
+        <input type="number" min ="0" id="copperPieces" maxlength="5" size="5" /><br>
         <label for="sleightOfHand_label">Silver Pieces</label>
-        <input type="text" id="silverPieces" maxlength="5" size="5" /><br>
+        <input type="number" min ="0" id="silverPieces" maxlength="5" size="5" /><br>
         <label for="goldPieces_label">Gold Pieces</label>
-        <input type="text" id="goldPieces" maxlength="5" size="5" /><br>
+        <input type="number" min ="0" id="goldPieces" maxlength="5" size="5" /><br>
         <label for="platinumPieces_label">Platium Pieces</label>
-        <input type="text" id="platinumPieces" maxlength="5" size="5" />
+        <input type="number" min ="0" id="platinumPieces" maxlength="5" size="5" />
       </div>
     </div>
   </div>
@@ -300,5 +298,7 @@
         Ability
         Scores</button>
     </div>
-
+    <script type="text/javascript" src="../js/autoAbilScore.js"></script>
+    <script type="text/javascript" src="../js/character.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 </html>
