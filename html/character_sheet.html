@@ -47,35 +47,37 @@
     <!-- This will be the left collumn       -->
     <div class="firstCol">
       <div class="inspiration">
-        <input type="text" id="proficiencyBonus" maxlength="2" size="1">
+        <i class="fas fa-level-up-alt fa-2x"></i>
+        <input class="middleTextBox" type="text" id="proficiencyBonus" maxlength="2" size="1">
         <label id="proficiencyBonus_label">Proficiency Bonus</label> <br>
-        <input type="text" id="inspiration" maxlength="2" size="1">
+        <i class="fas fa-theater-masks fa-2x"></i>
+        <input class="middleTextBox" type="text" id="inspiration" maxlength="2" size="1">
         <label id="inspiration_label">Inspiration</label>
       </div>
       <div class="abilScore">
         <label id="str_label"><i class="fas fa-dumbbell"></i> Strength</label> <br>
-        <input type="text" id="str" maxlength="2" size="1" onchange="onChangeAbilityModifier('str')"> <br>
-        <input type="text" id="strModifier" maxlength="3" size="1" READONLY> <br>
+        <input class="score" type="text" id="str" maxlength="2" size="1" onchange="onChangeAbilityModifier('str')"> <br>
+        <input class="middleTextBox" type="text" id="strModifier" maxlength="3" size="1" READONLY> <hr>
 
         <label id="dex_label"><i class="fas fa-running"></i> Dexterity</label> <br>
-        <input type="text" id="dex" maxlength="2" size="1" onchange="onChangeAbilityModifier('dex')"> <br>
-        <input type="text" id="dexModifier" maxlength="3" size="1" READONLY> <br>
+        <input class="score" type="text" id="dex" maxlength="2" size="1" onchange="onChangeAbilityModifier('dex')"> <br>
+        <input class="middleTextBox" type="text" id="dexModifier" maxlength="3" size="1" READONLY> <hr>
 
         <label id="con_label"><i class="fas fa-heart"></i> Constitution</label> <br>
-        <input type="text" id="con" maxlength="2" size="1" onchange="onChangeAbilityModifier('con')"> <br>
-        <input type="text" id="conModifier" maxlength="3" size="1" READONLY> <br>
+        <input class="score" type="text" id="con" maxlength="2" size="1" onchange="onChangeAbilityModifier('con')"> <br>
+        <input class="middleTextBox" type="text" id="conModifier" maxlength="3" size="1" READONLY> <hr>
 
         <label id="int_label"><i class="fas fa-brain"></i> Intelligence</label> <br>
-        <input type="text" id="int" maxlength="2" size="1" onchange="onChangeAbilityModifier('int')"> <br>
-        <input type="text" id="intModifier" maxlength="3" size="1" READONLY> <br>
+        <input class="score" type="text" id="int" maxlength="2" size="1" onchange="onChangeAbilityModifier('int')"> <br>
+        <input class="middleTextBox" type="text" id="intModifier" maxlength="3" size="1" READONLY> <hr>
 
         <label id="wis_label"><i class="fas fa-lightbulb"></i> Wisdom</label> <br>
-        <input type="text" id="wis" maxlength="2" size="1" onchange="onChangeAbilityModifier('wis')"> <br>
-        <input type="text" id="wisModifier" maxlength="3" size="1" READONLY> <br>
+        <input class="score" type="text" id="wis" maxlength="2" size="1" onchange="onChangeAbilityModifier('wis')"> <br>
+        <input class="middleTextBox" type="text" id="wisModifier" maxlength="3" size="1" READONLY> <hr>
 
         <label id="char_label"><i class="fas fa-comment-dots"></i> Charisma</label> <br>
-        <input type="text" id="char" maxlength="2" size="1" onchange="onChangeAbilityModifier('char')"> <br>
-        <input type="text" id="charModifier" maxlength="3" size="1" READONLY> <br>
+        <input class="score" type="text" id="char" maxlength="2" size="1" onchange="onChangeAbilityModifier('char')"> <br>
+        <input class="middleTextBox" type="text" id="charModifier" maxlength="3" size="1" READONLY>
 
       </div>
       <div class="skills">
@@ -181,7 +183,7 @@
         <label for="persuasion_label">Persuasion</label><br>
       </div>
       <div class="passPer">
-        <input type="text" id="passivePer" maxlength="3" size="1" READONLY />
+        <input class="middleTextBox" type="text" id="passivePer" maxlength="3" size="1" READONLY />
         <label id="passivePer_label"><i class="fas fa-eye"></i> Passive Wisdom (Perception)</label>
       </div>
       <div class="prof">
@@ -193,38 +195,43 @@
     <div class="points">
       <!-- This will be the middle collumn       -->
       <div class="armor">
-        <input type="text" id="armorClass" />
+        <i class="fas fa-shield-alt fa-2x"></i><br>
+        <input class="middleTextBox" type="text" id="armorClass" maxlength="3" size="2" /><br>
         <label for="armorClass_label">Armor Class</label>
       </div>
 
       <div class="initative">
-        <input type="text" id="initiative" />
+        <i class="fas fa-stopwatch fa-2x"></i><br>
+        <input class="middleTextBox" type="text" id="initiative" maxlength="3" size="2" /><br>
         <label for="initiative_label">Initiative</label>
       </div>
 
       <div class="speed">
-        <input type="text" id="speed" />
+        <i class="fas fa-tachometer-alt fa-2x"></i><br>
+        <input class="middleTextBox" type="text" id="speed" maxlength="3" size="2" /><br>
         <label for="speed_label">Speed</label>
       </div>
       <div class="hit">
         <div>
-          <input type="text" id="hitPointMaximum" />
-          <label for="hitPointMaximum_label">Hit Point Maximum</label><br>
+          <i class="far fa-heart fa-2x"></i><br>
+          <input class="middleTextBox" type="text" id="hitPointMaximum" maxlength="4" size="2" /><br>
+          <label for="hitPointMaximum_label">Hit Point Maximum</label> <br>
 
-          <input type="text" id="currentHitPoints" />
+          <input class="middleTextBox" type="text" id="currentHitPoints" maxlength="4" size="5" /><br>
           <label for="currentHitPoints_label">Current Hit Points</label>
+          <hr>
 
         </div>
-        <input type="text" id="tempHitPoints" />
+        <input class="middleTextBox" type="text" id="tempHitPoints" maxlength="4" size="5" /><br>
         <label for="tempHitPoints_label">Temporary Hit Points</label>
-        <div>
-          <input type="text" id="hitDice" />
-          <label for="hitDice_label">Hit Dice</label>
-        </div>
       </div>
-
-
-      <div>
+      <div class="hitDice">
+        <i class="fas fa-dice-d6 fa-2x"></i><br>
+        <input class="middleTextBox" type="text" id="hitDice" maxlength="4" size="2" /><br>
+        <label for="hitDice_label">Hit Dice</label>
+      </div>
+      <div class="death">
+        <i class="fas fa-heart-broken fa-2x"></i><br>
         <label for="successses_label">Successes</label>
         <input type="checkbox" id="successesOne">
         <input type="checkbox" id="successesTwo">
@@ -237,51 +244,59 @@
 
         <label for="deathSaves_label">Death Saves</label>
       </div>
-    <div>
-      <label for="attacksAndSpellcastingName_label">Name</label><br>
-      <input type="text" id="attacksAndSpellcastingNameOne" /><br>
-      <input type="text" id="attacksAndSpellcastingNameTwo" /><br>
-      <input type="text" id="attacksAndSpellcastingNameThree" /><br>
+      <div class="atkspl">
+        <div class="name">
+          <label for="attacksAndSpellcastingName_label">Name</label><br>
+          <input type="text" id="attacksAndSpellcastingNameOne" /><br>
+          <input type="text" id="attacksAndSpellcastingNameTwo" /><br>
+          <input type="text" id="attacksAndSpellcastingNameThree" /><br>
+        </div>
 
-      <label for="attacksAndSpellcastingAtkBonus_label">Atk Bonus</label><br>
-      <input type="text" id="attacksAndSpellcastingAtkBonusOne" /><br>
-      <input type="text" id="attacksAndSpellcastingAtkBonusTwo" /><br>
-      <input type="text" id="attacksAndSpellcastingAtkBonusThree" /><br>
-
-      <label for="attacksAndSpellcastingDamageOrType_label">Damage/Type</label><br>
-      <input type="text" id="attacksAndSpellcastingDamageOrTypeOne" /><br>
-      <input type="text" id="attacksAndSpellcastingDamageOrTypeTwo" /><br>
-      <input type="text" id="attacksAndSpellcastingDamageOrTypeThree" /><br>
-    </div>
-
-    <div>
-      <input type="text" id="attacksAndSpellcasting" /><br>
-      <label for="attacksAndSpellcasting_label">Attacks & Spellcasting</label>
-    </div>
-    <div class="stuff">
-      <div class="equipment">
-        <textarea name="note" id="equipmentAndCharacterNotes" cols="35vw" rows="15"
-          placeholder="Type something..."></textarea><br>
-        <label id="equipmentAndCharacterNotes_label">Equipment And Character Notes</label><br>
+        <div class="bonus">
+          <label for="attacksAndSpellcastingAtkBonus_label">Atk Bonus</label><br>
+          <input type="text" id="attacksAndSpellcastingAtkBonusOne" /><br>
+          <input type="text" id="attacksAndSpellcastingAtkBonusTwo" /><br>
+          <input type="text" id="attacksAndSpellcastingAtkBonusThree" /><br>
+        </div>
+        <div class="damage">
+          <label for="attacksAndSpellcastingDamageOrType_label">Damage/Type</label><br>
+          <input type="text" id="attacksAndSpellcastingDamageOrTypeOne" /><br>
+          <input type="text" id="attacksAndSpellcastingDamageOrTypeTwo" /><br>
+          <input type="text" id="attacksAndSpellcastingDamageOrTypeThree" /><br>
+        </div>
+        <div class="attack">
+          <br>
+          <textarea name="attacksAndSpellcasting" id="attacksAndSpellcasting" cols="50" rows="15"
+            placeholder="Type something..."></textarea><br>
+          <label for="attacksAndSpellcasting_label">Attacks & Spellcasting</label>
+        </div>
       </div>
-      <div class="money">
-        <i class="fas fa-coins fa-5x"></i><br>
-        <label for="copperPieces_label">Copper Pieces</label>
-        <input type="text" id="copperPieces" maxlength="5" size="5" /><br>
-        <label for="sleightOfHand_label">Silver Pieces</label>
-        <input type="text" id="silverPieces" maxlength="5" size="5" /><br>
-        <label for="goldPieces_label">Gold Pieces</label>
-        <input type="text" id="goldPieces" maxlength="5" size="5" /><br>
-        <label for="platinumPieces_label">Platium Pieces</label>
-        <input type="text" id="platinumPieces" maxlength="5" size="5" />
+
+
+      <div class="stuff">
+        <div class="equipment">
+          <textarea name="note" id="equipmentAndCharacterNotes" cols="35vw" rows="15"
+            placeholder="Type something..."></textarea><br>
+          <label id="equipmentAndCharacterNotes_label">Equipment And Character Notes</label><br>
+        </div>
+        <div class="money">
+          <i class="fas fa-coins fa-5x"></i><br>
+          <label for="copperPieces_label">Copper Pieces</label>
+          <input type="text" id="copperPieces" maxlength="5" size="5" /><br>
+          <label for="sleightOfHand_label">Silver Pieces</label>
+          <input type="text" id="silverPieces" maxlength="5" size="5" /><br>
+          <label for="goldPieces_label">Gold Pieces</label>
+          <input type="text" id="goldPieces" maxlength="5" size="5" /><br>
+          <label for="platinumPieces_label">Platium Pieces</label>
+          <input type="text" id="platinumPieces" maxlength="5" size="5" />
+        </div>
       </div>
     </div>
-  </div>
 
     <div class="traits">
       <!-- This will be the right collumn       -->
       <div class="feat">
-        <textarea name="note" id="featuresAndTraits" cols="35vw" rows="15"
+        <textarea name="note" id="featuresAndTraits" cols="35vw" rows="70"
           placeholder="Type something..."></textarea><br>
         <label id="featuresAndTraits_label">Features & Traits</label>
       </div>

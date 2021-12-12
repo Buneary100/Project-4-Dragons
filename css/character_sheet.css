@@ -16,19 +16,15 @@ body {
 }
 .charName { 
   grid-area: charName; 
-  font-size: 20px;
 }
 .charDesc1 { 
   grid-area: charDesc1; 
-  font-size: 10px;
 }
 .charDesc2 { 
   grid-area: charDesc2; 
-  font-size: 10px;
 }
 .charDesc3 { 
   grid-area: charDesc3; 
-  font-size: 10px;
 }
 
 /*First column*/
@@ -46,16 +42,31 @@ body {
   grid-area: abilScore; 
   border-style: solid;
   border-width: 1px; 
-  line-height: 4vh;
-  padding: 5px;
+  line-height: 2.9;
+  padding-top: 10px;
   margin: 1%;
+}
+
+.score {
+  height: 30px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.middleTextBox {
+  text-align: center;
+}
+
+.abilScore > hr {
+  margin: 5px;
 }
 .inspiration { 
   grid-area: inspiration;
   border-style: solid;
   border-width: 1px; 
   margin: 1%;
-  padding: 5px;
+  padding-top: 20px;
+  line-height: 50px;
 }
 .passPer { 
   grid-area: passPer;
@@ -79,41 +90,96 @@ body {
   border-style: solid;
   border-width: 1px; 
   margin: 1%;
+  line-height: 2;
 }
 /*Second column*/
 .points {
   grid-area: points;
   display: grid;
+  line-height: 30px;
+
   grid-template-areas:
   'armor initative speed'
   'hit hit hit'
-  'death death death'
-  'attack attack attack'
+  'hitDice death death'
+  'atkspl atkspl atkspl'
   'stuff stuff stuff'
 }
 
 .armor {
   grid-area: armor;
+  border-style: solid;
+  border-width: 1px; 
+  padding-top: 10px; 
+  margin: 1%;
 }
 
 .initative {
   grid-area: initative;
+  border-style: solid;
+  border-width: 1px; 
+  padding-top: 10px; 
+  margin: 2%;
 }
 
 .speed {
   grid-area: speed;
+  border-style: solid;
+  border-width: 1px; 
+  padding-top: 10px; 
+  margin: 1%;
 }
 
 .hit {
   grid-area: hit;
+  border-style: solid;
+  border-width: 1px; 
+  padding: 10px;
+  margin: 1%;
+}
+
+.hitDice {
+  grid-area: hitDice;
+  border-style: solid;
+  border-width: 1px; 
+  padding-top: 10px; 
+  line-height: 30px;
+  margin: 1%;
 }
 
 .death {
   grid-area: death;
+  padding-top: 10px; 
+  border-style: solid;
+  border-width: 1px; 
+  margin: 1%;
+}
+
+.name {
+  grid-area: name;
+}
+
+.bonus {
+  grid-area: bonus;
+}
+
+.damage {
+  grid-area: damage;
 }
 
 .attack {
   grid-area: attack;
+}
+
+.atkspl {
+  display: grid;
+  grid-area: atkspl;
+  grid-template-areas:   
+  'name bonus damage'
+  'attack attack attack';
+  border-style: solid;
+  border-width: 1px;
+  margin: 1%;
 }
 
 .equipment {
@@ -142,18 +208,6 @@ body {
 }
 
 /*Third column*/
-.traits { 
-  grid-area: traits;
-  display: grid;
-  grid-template-areas: 
-  'personality'
-  'ideals'
-  'bonds'
-  'flaws'
-  'feat'
-  'feat';
-}
-
 .feat {
   grid-area: feat;
   border-style: solid;
@@ -165,10 +219,10 @@ body {
   display: grid;
   grid-template-areas:
     'char char char'
-    'firstCol points traits'
-    'firstCol points traits'
-    'firstCol points traits'
-    'firstCol points traits';
+    'firstCol points feat'
+    'firstCol points feat'
+    'firstCol points feat'
+    'firstCol points feat';
   grid-gap: 10px;
   padding: 1vw;
   background-color: white;
