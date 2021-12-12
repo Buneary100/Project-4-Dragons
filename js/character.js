@@ -95,25 +95,25 @@ function save() {
     const url = "http://localhost:3000/save";
 
     const dataObject = {
-        characterName: sheetInfo[0].innerHTML,
-        classLevel: sheetInfo[1].innerHTML,
-        background: sheetInfo[2].innerHTML,
-        playerName: sheetInfo[3].innerHTML,
-        race: sheetInfo[4].innerHTML,
-        alignment: sheetInfo[5].innerHTML,
-        hitDice: sheetInfo[6].innerHTML,
-        otherProficiencies: sheetInfo[7].innerHTML,
-        features: sheetInfo[8].innerHTML,
-        equipment: sheetInfo[9].innerHTML,
-        attackName1: sheetInfo[10].innerHTML,
-        attackName2: sheetInfo[11].innerHTML,
-        attackName3: sheetInfo[12].innerHTML,
-        attackBonus1: sheetInfo[13].innerHTML,
-        attackBonus2: sheetInfo[14].innerHTML,
-        attackBonus3: sheetInfo[15].innerHTML,
-        attackDamage1: sheetInfo[16].innerHTML,
-        attackDamage2: sheetInfo[17].innerHTML,
-        attackDamage3: sheetInfo[18].innerHTML,
+        characterName: sheetInfo[0].value,
+        classLevel: sheetInfo[1].value,
+        background: sheetInfo[2].value,
+        playerName: sheetInfo[3].value,
+        race: sheetInfo[4].value,
+        alignment: sheetInfo[5].value,
+        hitDice: sheetInfo[6].value,
+        otherProficiencies: sheetInfo[7].value,
+        features: sheetInfo[8].value,
+        equipment: sheetInfo[9].value,
+        attackName1: sheetInfo[10].value,
+        attackName2: sheetInfo[11].value,
+        attackName3: sheetInfo[12].value,
+        attackBonus1: sheetInfo[13].value,
+        attackBonus2: sheetInfo[14].value,
+        attackBonus3: sheetInfo[15].value,
+        attackDamage1: sheetInfo[16].value,
+        attackDamage2: sheetInfo[17].value,
+        attackDamage3: sheetInfo[18].value,
         experiencePoints: sheetInfo[19].value,
         proficiencyBonus: sheetInfo[20].value,
         strength: sheetInfo[21].value,
@@ -172,19 +172,6 @@ function save() {
         .then(response => response.json())               // obtain json object sent from server
         .then(jsonObject => {                            // use jsonObject and get its message property
             console.log(jsonObject.message);   // set innerHTML of span to message sent in jsonObject
-            for (var i in jsonObject.message)
-                result.push(jsonObject.message[i]);
-
-            for (var i = 1; i < result.length - 1; i++) {
-                if (result[i] != null) {
-                    if (result[i] = '0') {
-                        proficiencyInfo[i - 1].checked = false;
-                    }
-                    else {
-                        proficiencyInfo[i - 1].checked = true;
-                    }
-                }
-            }
         });
     result.splice(0, result.length);
 }
@@ -210,15 +197,24 @@ function proficiency() {
 
             for (var i = 1; i < result.length - 1; i++) {
                 if (result[i] != null) {
-                    if (result[i] = '0') {
-                        proficiencyInfo[i - 1].checked = false;
+                    if (result[i] == 0) {
+                        if(proficiencyInfo[i-1].checked == true)
+                        {
+                            proficiencyInfo[i - 1].click();
+                        }
+                        proficiencyInfo[i - 1].checked = false; 
                     }
                     else {
+                        if(proficiencyInfo[i-1].checked == false)
+                        {
+                            proficiencyInfo[i - 1].click();
+                        }
                         proficiencyInfo[i - 1].checked = true;
                     }
                 }
             }
         });
+    loadProficiency();
     result.splice(0, result.length);
 }
 
@@ -244,19 +240,20 @@ function start() {
             for (var i = 1; i < result.length - 1; i++) {
                 if (result[i] != null) {
                     if (i >= 20) {
-                        sheetInfo[i - 1].innerHTML = (result[i]);
+                        sheetInfo[i - 1].value = Number(result[i]);
                     }
                     else {
-                        sheetInfo[i - 1].innerHTML = result[i];
+                        sheetInfo[i - 1].value = result[i];
                     }
                 }
             }
 
             result.splice(0, result.length);
         });
-    proficiency();
 }
 
-window.onload = start();
-
-//fillAbilityScoreAll();
+function loadProficiency()
+{
+    fillAbilityScoreAll();
+}
+window.onload = start;

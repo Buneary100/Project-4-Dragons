@@ -166,8 +166,8 @@ app.post('/save', (req, res) => {
     Boolean(req.body.performance), Boolean(req.body.persuasion)];
 
     const booleanSetArrayName = ["strengthSave", "dexteritySave",
-        "constitutionSave", "IntelligenceSave", "WisdomSave",
-        "CharismaSave", "athletics", "acrobatics", "sleightOfHand",
+        "ConstiturionSave", "IntelligenceSave", "WisdomSave",
+        "CharismaSave", "athletics", "acrobatics", "SlightOfHand",
         "stealth", "arcana", "history", "investigation",
         "nature", "religion", "animalHandling", "insight", "medicine",
         "perception", "survival", "deception", "intimidation",
@@ -190,7 +190,7 @@ app.post('/save', (req, res) => {
     }
 
     for (var i = 0; i < numbersetArray.length; i++) {
-        sqlCode = `UPDATE charactersheet SET ${numbersetArray[i]} = '${numbersetArray[i]}' WHERE username = '${app.locals.currentUsers}'`;
+        sqlCode = `UPDATE charactersheet SET ${numberSetArrayName[i]} = '${numbersetArray[i]}' WHERE username = '${app.locals.currentUsers}'`;
         con.query(sqlCode, (err, result) => {
             if (err) {
                 console.log(err.message);

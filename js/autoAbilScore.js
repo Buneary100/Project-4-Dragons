@@ -132,7 +132,7 @@ function fillAbilityScore() {
 function fillAbilityScoreAll() {
     fillBaseMod();
     fillSkillModifiers();
-    resetCheckboxes();
+    //resetCheckboxes();
 }
 
 function rollAbilityScore() {
