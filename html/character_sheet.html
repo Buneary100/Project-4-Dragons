@@ -10,8 +10,6 @@
   <script src="https://kit.fontawesome.com/0ddaa4c2d2.js" crossorigin="anonymous"></script>
   <link href="../css/styles.css" rel="stylesheet" type="text/css">
   <link href="../css/character_sheet.css" rel="stylesheet" type="text/css">
-  <script type="text/javascript" src="../js/autoAbilScore.js"></script>
-  <script type="text/javascript" src="../js/character.js"></script>
 </head>
 <div class="grid-container">
 
@@ -20,7 +18,7 @@
       <div class="charName">
         <input type="text" id="characterName"> <br>
         <label id="characterName_label">Character Name</label><br><br>
-        <button type="button" id="saveButton" name="saveButton" onClick="" style="width: 150px;"><i
+        <button type="button" id="saveButton" name="saveButton" onClick="save()" style="width: 150px;"><i
             class="far fa-save"></i> Click Me To
           Save!!!!</button>
       </div>
@@ -78,6 +76,7 @@
         <label id="char_label"><i class="fas fa-comment-dots"></i> Charisma</label> <br>
         <input class="score" type="text" id="char" maxlength="2" size="1" onchange="onChangeAbilityModifier('char')"> <br>
         <input class="middleTextBox" type="text" id="charModifier" maxlength="3" size="1" READONLY>
+
 
       </div>
       <div class="skills">
@@ -315,5 +314,7 @@
         Ability
         Scores</button>
     </div>
-
+    <script type="text/javascript" src="../js/autoAbilScore.js"></script>
+    <script type="text/javascript" src="../js/character.js"></script>
+    <script type="text/javascript" src="../js/main.js"></script>
 </html>

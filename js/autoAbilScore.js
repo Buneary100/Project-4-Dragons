@@ -1,20 +1,20 @@
-const abilityScores = [ "str", "dex", "con", "int", "wis", "char"];
+const abilityScores = ["str", "dex", "con", "int", "wis", "char"];
 
-function applyProficiency(id){
+function applyProficiency(id) {
     // add proficiency bonus to id
     let idnum = parseInt(document.getElementById(id).value);
     let prof = parseInt(document.getElementById("proficiencyBonus").value);
     let checkId = "check" + (id.charAt(0).toUpperCase() + id.slice(1));
     let modifier;
-    if(document.getElementById(checkId).checked == true) {
+    if (document.getElementById(checkId).checked == true) {
         modifier = idnum + prof;
     } else {
         modifier = idnum - prof;
     }
-    if(modifier > 0) {
+    if (modifier > 0) {
         modifier = "+" + modifier;
     }
-    if(id == "perception") {
+    if (id == "perception") {
         document.getElementById("passivePer").value = modifier;
     }
     document.getElementById(id).value = modifier;
@@ -88,15 +88,14 @@ function onChangeAbilityModifier(abil) {
 }
 
 function resetCheckboxes() {
-    const boxes = ["checkStrSavingThrow", "checkAthletics", 
-    "checkDexSavingThrow", "checkAcrobatics", "checkSleightOfHand", "checkStealth", 
-    "checkConSavingThrow", 
-    "checkIntSavingThrow", "checkArcana", "checkHistory", "checkInvestigation", "checkNature", "checkReligion", 
-    "checkWisSavingThrow", "checkAnimalHandling", "checkInsight", "checkMedicine", "checkPerception", "checkSurvival", 
-    "checkCharSavingThrow", "checkDeception", "checkIntimidation", "checkPerformance", "checkPersuasion"];
+    const boxes = ["checkStrSavingThrow", "checkAthletics",
+        "checkDexSavingThrow", "checkAcrobatics", "checkSleightOfHand", "checkStealth",
+        "checkConSavingThrow",
+        "checkIntSavingThrow", "checkArcana", "checkHistory", "checkInvestigation", "checkNature", "checkReligion",
+        "checkWisSavingThrow", "checkAnimalHandling", "checkInsight", "checkMedicine", "checkPerception", "checkSurvival",
+        "checkCharSavingThrow", "checkDeception", "checkIntimidation", "checkPerformance", "checkPersuasion"];
 
-    for (let i = 0; i < 24; i++)
-    {
+    for (let i = 0; i < 24; i++) {
         document.getElementById(boxes[i]).checked = false;
     }
 }
@@ -105,7 +104,7 @@ function determineModifier(score) {
     const threshold = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29, 30];
     modifier = -5;
     for (let i = 0; i < 16; i++) {
-        if(score <= threshold[i]){
+        if (score <= threshold[i]) {
             if (modifier > 0) {
                 modifier = "+" + modifier;
             }
@@ -116,15 +115,13 @@ function determineModifier(score) {
 }
 
 function fillBaseMod() {
-    for (let i = 0; i < 6; i++)
-    {
+    for (let i = 0; i < 6; i++) {
         onChangeAbilityModifier(abilityScores[i]);
     }
 }
 
 function fillAbilityScore() {
-    for (let i = 0; i < 6; i++)
-    {
+    for (let i = 0; i < 6; i++) {
         document.getElementById(abilityScores[i]).value = rollAbilityScore();
     }
     fillBaseMod();
@@ -132,26 +129,32 @@ function fillAbilityScore() {
     resetCheckboxes();
 }
 
-function rollAbilityScore() {
-const dice = [rollD6(), rollD6(), rollD6(), rollD6()];
+function fillAbilityScoreAll() {
+    fillBaseMod();
+    fillSkillModifiers();
+    resetCheckboxes();
+}
 
- let lowest = 0;
- let lowVal = dice[0];
- for (let i = 1; i < 4; i++) {
-     if (dice[i] < lowVal) {
-         lowVal = dice[i];
-         lowest = i;
-     }
- }
- let total = 0;
- for(let i = 0; i < 4; i++) {
-     if (i != lowest) {
-         total += dice[i];
-     }
- }
- return total;
+function rollAbilityScore() {
+    const dice = [rollD6(), rollD6(), rollD6(), rollD6()];
+
+    let lowest = 0;
+    let lowVal = dice[0];
+    for (let i = 1; i < 4; i++) {
+        if (dice[i] < lowVal) {
+            lowVal = dice[i];
+            lowest = i;
+        }
+    }
+    let total = 0;
+    for (let i = 0; i < 4; i++) {
+        if (i != lowest) {
+            total += dice[i];
+        }
+    }
+    return total;
 }
 
 function rollD6() {
-    return Math.floor(Math.random() * 6 ) + 1;
-}
+    return Math.floor(Math.random() * 6) + 1;
+} 
