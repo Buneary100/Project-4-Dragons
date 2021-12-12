@@ -27,7 +27,6 @@ con.connect(function (err) {
     console.log("Connected!");
 });
 
-
 app.post('/register', (req, res) => {
 
     const username = req.body.username;
@@ -115,6 +114,25 @@ app.post('/setProficiency', (req, res) => {
         if (result.length > 0) {
             console.log(result[0]);
             res.send(JSON.stringify({ message: result[0] }));
+        }
+        else {
+            //res.send(JSON.stringify({ message: 'wrong username or password' }));
+        }
+    });
+
+})
+
+app.post('/save', (req, res) => {
+    const silver = Number(req.body.silver);
+    var sqlCode =`UPDATE charactersheet SET silver = '${silver}' WHERE username = '${app.locals.currentUsers}'`;
+    
+    con.query(sqlCode, (err, result) => {
+        if (err) {
+            console.log(err.message);
+        }
+        if (result.length > 0) {
+            console.log(result.affectedRows);
+            //res.send(JSON.stringify({ message: result[0] }));
         }
         else {
             //res.send(JSON.stringify({ message: 'wrong username or password' }));
